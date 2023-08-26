@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./IntroductionSelection.scss";
+import "./IntroductionSection.scss";
 
 function IntroductionSection() {
     return (
@@ -9,7 +9,7 @@ function IntroductionSection() {
                 <p>
                     The first organization dedicated to fostering interest in
                     biology among high-school students through competition and
-                    collaboration
+                    collaboration.
                 </p>
                 <Link to="/register">Register</Link>
             </div>
