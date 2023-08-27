@@ -1,9 +1,11 @@
-import IntroductionSection from "../components/root/IntroductionSection";
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/MainPage/Navbar";
 
 function Root() {
     return (
         <div>
-            <IntroductionSection />
+            <Navbar />
+            <Outlet />
         </div>
     );
 }

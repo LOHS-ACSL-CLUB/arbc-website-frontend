@@ -8,13 +8,19 @@ import {
     createRoutesFromElements,
 } from "react-router-dom";
 import Root from "./routes/Root.tsx";
+import MainPage from "./components/MainPage/index.tsx";
 
 const router = createBrowserRouter(
-    createRoutesFromElements(<Route path="/" element={<Root />}></Route>)
+    createRoutesFromElements(
+        <Route path="/" element={<Root />}>
+            <Route path="/" element={<MainPage />} />
+        </Route>
+    )
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
+        {/* <Navbar /> */}
         <RouterProvider router={router} />
     </React.StrictMode>
 );
