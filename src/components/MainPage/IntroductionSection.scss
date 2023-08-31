@@ -6,15 +6,27 @@ $blue1: #1d4ed8;
     background-color: hsla(0, 0%, 0%, 0.5);
     box-sizing: border-box;
     padding-top: 180px;
-    padding-left: 320px;
-    padding-right: 320px;
-    height: 1080px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 900px;
+
+    background-image: linear-gradient(
+            0deg,
+            hsla(0, 0%, 0%, 0.5),
+            hsla(0, 0%, 0%, 0.5)
+        ),
+        url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
     .texts {
         display: flex;
         flex-direction: column;
         align-items: center;
         max-height: 232px;
+        max-width: 1600px;
+        margin: 0 auto;
 
         h1 {
             color: $white1;
@@ -22,15 +34,18 @@ $blue1: #1d4ed8;
             font-size: 72px;
             margin-bottom: 0;
             margin-bottom: 20px;
+            line-height: 72px;
+            text-align: center;
         }
 
         p {
             color: $white2;
             font-size: 20px;
             font-weight: 700;
-            width: 768px;
+            max-width: 768px;
             text-align: center;
             margin-bottom: 20px;
+            line-height: 28px;
         }
 
         a {
@@ -46,6 +61,25 @@ $blue1: #1d4ed8;
             justify-content: center;
             cursor: pointer;
             text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .introduction-section {
+        padding-top: 80px;
+        height: 760px;
+
+        .texts {
+            h1 {
+                text-align: left;
+                font-size: 48px;
+                line-height: 60px;
+            }
+
+            p {
+                text-align: left;
+            }
         }
     }
 }

@@ -9,4 +9,10 @@
         width: 81px;
         height: 46px;
     }
+
+    @media screen and (max-width: 750px) {
+        span {
+            display: none;
+        }
+    }
 }

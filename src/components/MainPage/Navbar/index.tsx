@@ -1,12 +1,25 @@
+import { useState } from "react";
 import Icon from "./Icon";
 import Nav from "./Nav";
 import "./index.scss";
+import NavLinksList from "./NavLinksList";
 
 function Navbar() {
+    const [showCollapsedNav, setShowCollapsedNav] = useState(false);
+
     return (
         <div className="navbar">
-            <Icon />
-            <Nav />
+            <div className="navs">
+                <Icon />
+                <Nav
+                    showCollapsedNav={showCollapsedNav}
+                    setShowCollapsedNav={setShowCollapsedNav}
+                />
+            </div>
+
+            <NavLinksList
+                className={`collapsed-links ${showCollapsedNav ? "show" : ""}`}
+            />
         </div>
     );
 }

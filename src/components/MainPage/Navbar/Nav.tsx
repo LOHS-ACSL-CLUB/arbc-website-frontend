@@ -1,26 +1,23 @@
-import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import "./Nav.scss";
+import NavLinksList from "./NavLinksList";
 
-function Nav() {
+interface Props {
+    showCollapsedNav: boolean;
+    setShowCollapsedNav: (value: boolean) => void;
+}
+
+function Nav({ showCollapsedNav, setShowCollapsedNav }: Props) {
     return (
         <div className="nav">
-            <ul>
-                <li>
-                    <Link to="/competition">Competition</Link>
-                </li>
-                <li>
-                    <Link to="/resources">Resources</Link>
-                </li>
-                <li>
-                    <Link to="/results">Results</Link>
-                </li>
-                <li>
-                    <Link to="/chapters">Chapters</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
-            </ul>
+            <NavLinksList className="list-nav" />
+
+            <button
+                className="collapsed-nav"
+                onClick={() => setShowCollapsedNav(!showCollapsedNav)}
+            >
+                <FaBars />
+            </button>
         </div>
     );
 }
