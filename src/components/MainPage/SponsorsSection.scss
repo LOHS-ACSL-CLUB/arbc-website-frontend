@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .sponsors-section {
     display: flex;
     justify-content: center;
@@ -39,11 +41,16 @@
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: $threshold) {
     .sponsors-section {
         padding-bottom: 100px;
 
         .sponsors-logos {
+            flex-direction: column;
+
+            img {
+                width: 200px;
+            }
         }
     }
 }

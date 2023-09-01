@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .important-info-section {
     display: flex;
     justify-content: center;
@@ -61,7 +63,7 @@
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: $threshold) {
     .important-info-section {
         flex-direction: column;
 

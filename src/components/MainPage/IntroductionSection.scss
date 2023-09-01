@@ -1,6 +1,4 @@
-$white1: #f3f4f6;
-$white2: #dbeafe;
-$blue1: #1d4ed8;
+@import "src/variables";
 
 .introduction-section {
     background-color: hsla(0, 0%, 0%, 0.5);
@@ -65,7 +63,7 @@ $blue1: #1d4ed8;
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: $threshold) {
     .introduction-section {
         padding-top: 80px;
         height: 760px;

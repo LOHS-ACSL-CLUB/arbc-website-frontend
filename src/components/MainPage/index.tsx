@@ -1,9 +1,7 @@
 import CompetitionSection from "./CompetitionSection";
-import Footer from "./Footer";
 import ImportantInfoSection from "./ImportantInfoSection";
 import IntroductionSection from "./IntroductionSection";
 import Separator from "./Seperator";
-import SignUpSection from "./SignUpSection";
 import SponsorsSection from "./SponsorsSection";
 
 function MainPage() {
@@ -14,8 +12,6 @@ function MainPage() {
             <Separator />
             <ImportantInfoSection />
             <SponsorsSection />
-            <SignUpSection />
-            <Footer />
         </div>
     );
 }

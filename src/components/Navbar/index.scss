@@ -8,6 +8,7 @@
     }
 
     top: 0px;
+    left: 0px;
     position: sticky;
 
     .collapsed-links {
@@ -28,7 +29,6 @@
 
         li {
             transition: 0.2s;
-            padding: 10px 10px;
             cursor: pointer;
 
             &:hover {
@@ -37,6 +37,8 @@
 
             a {
                 color: black;
+                display: block;
+                padding: 10px 10px;
             }
         }
     }

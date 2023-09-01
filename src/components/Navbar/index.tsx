@@ -19,6 +19,7 @@ function Navbar() {
 
             <NavLinksList
                 className={`collapsed-links ${showCollapsedNav ? "show" : ""}`}
+                onAnyLinkClick={() => setShowCollapsedNav(false)}
             />
         </div>
     );

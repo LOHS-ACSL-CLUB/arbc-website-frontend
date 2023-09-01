@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 
-function NavLinksList(props: React.ComponentPropsWithoutRef<"ul">) {
+interface Props extends React.ComponentPropsWithoutRef<"ul"> {
+    onAnyLinkClick?(): void;
+}
+
+function NavLinksList({ onAnyLinkClick, ...props }: Props) {
     return (
-        <ul {...props}>
+        <ul {...props} onClick={onAnyLinkClick}>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
             <li>
                 <Link to="/competition">Competition</Link>
             </li>

@@ -1,16 +1,21 @@
+@import "src/variables";
+
 .icon {
     font-weight: 700;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
 
     .logo {
         width: 81px;
         height: 46px;
     }
+}
 
-    @media screen and (max-width: 750px) {
+@media screen and (max-width: $threshold) {
+    .icon {
         span {
             display: none;
         }

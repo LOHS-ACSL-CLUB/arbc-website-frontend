@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .competition-section {
     display: flex;
     justify-content: center;
@@ -27,14 +29,23 @@
             display: inline-block;
         }
     }
+
+    img {
+        object-fit: contain;
+        max-width: 400px;
+    }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: $threshold) {
     .competition-section {
         flex-direction: column;
 
         .texts {
             margin-bottom: 20px;
+        }
+
+        img {
+            max-width: initial;
         }
     }
 }
