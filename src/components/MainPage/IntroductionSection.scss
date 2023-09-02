@@ -3,10 +3,6 @@
 .introduction-section {
     background-color: hsla(0, 0%, 0%, 0.5);
     box-sizing: border-box;
-    padding-top: 180px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 900px;
 
     background-image: linear-gradient(
             0deg,
@@ -17,22 +13,25 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 200px;
+    padding-top: 40px;
 
-    .texts {
+    .content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-height: 232px;
         max-width: 1600px;
-        margin: 0 auto;
+        padding: 0px 10px;
 
         h1 {
             color: $white1;
-            font-weight: 800;
             font-size: 72px;
-            margin-bottom: 0;
+            font-weight: 800;
             margin-bottom: 20px;
-            line-height: 72px;
             text-align: center;
         }
 
@@ -42,33 +41,24 @@
             font-weight: 700;
             max-width: 768px;
             text-align: center;
-            margin-bottom: 20px;
             line-height: 28px;
         }
 
         a {
             font-weight: 500;
             font-size: 18px;
-            font-family: inherit;
             color: $blue1;
-            padding: 20px 60px;
+            padding: 20px 50px;
             background-color: $white2;
             border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
-            text-decoration: none;
         }
     }
 }
 
 @media screen and (max-width: $threshold) {
     .introduction-section {
-        padding-top: 80px;
-        height: 760px;
-
-        .texts {
+        .content {
             h1 {
                 text-align: left;
                 font-size: 48px;

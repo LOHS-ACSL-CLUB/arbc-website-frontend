@@ -4,7 +4,7 @@ import "./IntroductionSection.scss";
 function IntroductionSection() {
     return (
         <div className="introduction-section">
-            <div className="texts">
+            <div className="content">
                 <h1>American Regional Biology Competition</h1>
                 <p>
                     The first organization dedicated to fostering interest in
@@ -15,6 +15,7 @@ function IntroductionSection() {
                     Register
                 </Link>
             </div>
+            <div className="padding" />
         </div>
     );
 }

@@ -1,55 +1,42 @@
-@import "src/variables";
-
 .sponsors-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 0 20px;
-    padding-bottom: 300px;
+    padding: 20px 10px;
     background-color: #f3f4f6;
 
-    .blue {
-        color: #1d4ed8;
-    }
-
-    h2 {
-        color: #111827;
-    }
-
-    p {
-        color: #6b7280;
-    }
-
-    p.text {
-        max-width: 750px;
-        text-align: center;
-    }
-
-    .sponsors-logos {
+    .container {
+        max-width: 900px;
         display: flex;
-        max-width: 768px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
 
-        img {
-            max-width: 256px;
-            height: 100%;
-            object-fit: cover;
+        .blue {
+            color: #1d4ed8;
         }
-    }
-}
 
-@media screen and (max-width: $threshold) {
-    .sponsors-section {
-        padding-bottom: 100px;
+        h2 {
+            color: #111827;
+            text-align: center;
+        }
+
+        p {
+            color: #6b7280;
+            text-align: center;
+        }
 
         .sponsors-logos {
-            flex-direction: column;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
 
             img {
-                width: 200px;
+                width: 256px;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
