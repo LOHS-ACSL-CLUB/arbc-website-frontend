@@ -17,14 +17,14 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 200px;
-    padding-top: 40px;
+    padding-bottom: 400px;
+    padding-top: 100px;
 
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 1600px;
+        max-width: 1000px;
         padding: 0px 10px;
 
         h1 {
@@ -39,7 +39,6 @@
             color: $white2;
             font-size: 20px;
             font-weight: 700;
-            max-width: 768px;
             text-align: center;
             line-height: 28px;
         }
@@ -52,12 +51,16 @@
             background-color: $white2;
             border-radius: 6px;
             cursor: pointer;
+            margin-top: 50px;
         }
     }
 }
 
 @media screen and (max-width: $threshold) {
     .introduction-section {
+        padding-top: 40px;
+        padding-bottom: 200px;
+
         .content {
             h1 {
                 text-align: left;
