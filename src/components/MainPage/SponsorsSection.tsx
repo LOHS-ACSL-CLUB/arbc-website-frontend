@@ -1,8 +1,8 @@
 import "./SponsorsSection.scss";
-import aopsLogo from "assets/aops-logo.svg";
-import biolympiadsLogo from "assets/biolympiads-logo.png";
-import wolframLogo from "assets/wolfram-logo.png";
-import baologyPrepLogo from "assets/baology-prep-logo.png";
+import aopsLogo from "assets/sponsors-logos/aops-logo.svg";
+import biolympiadsLogo from "assets/sponsors-logos/biolympiads-logo.png";
+import wolframLogo from "assets/sponsors-logos/wolfram-logo.png";
+import baologyPrepLogo from "assets/sponsors-logos/baology-prep-logo.png";
 
 function SponsorsSection() {
     return (

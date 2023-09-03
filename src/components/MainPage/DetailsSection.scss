@@ -1,0 +1,70 @@
+@import "/src/variables";
+
+.details-section {
+    background-color: #00254c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px 10px;
+        align-content: stretch;
+        min-width: 0;
+        padding: $mobile-padding;
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            gap: 10px 10px;
+            min-width: 0;
+
+            div {
+                max-width: 550px;
+                word-break: break-word;
+                min-width: 0;
+
+                h2 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 29px;
+                    min-width: 0;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .row-singular {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 550px;
+
+            h2 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+    }
+
+    a {
+        color: $link-color;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: "Open Sans";
+    }
+}

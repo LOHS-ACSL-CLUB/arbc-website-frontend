@@ -1,0 +1,86 @@
+@import "/src/variables";
+
+.news-section {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f9fa;
+    padding: $mobile-padding;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px 10px;
+
+        .news-and-updates {
+            display: flex;
+            min-height: 500px;
+            justify-content: center;
+            gap: 10px 50px;
+            flex-wrap: wrap;
+
+            .sidebar {
+                background-color: white;
+                max-width: 280px;
+                padding: 0px 10px;
+
+                h2 {
+                    font-size: 32px;
+                    line-height: 38.4px;
+                    font-weight: 400;
+                }
+            }
+
+            .content {
+                display: flex;
+                max-width: 800px;
+
+                h2 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 28.8px;
+                }
+            }
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 50px;
+
+            .number,
+            .name {
+                color: #00458f;
+            }
+
+            .number {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 72px;
+            }
+
+            .name {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+            }
+
+            .stat {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex-basis: 150px;
+            }
+        }
+    }
+
+    h2 {
+        font-family: Montserrat;
+    }
+}
