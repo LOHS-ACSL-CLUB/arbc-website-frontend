@@ -2,7 +2,7 @@ import IntroductionSection from "./IntroductionSection";
 
 function ResourcesPage() {
     return (
-        <div className="resources-page" style={{ height: "100vh" }}>
+        <div className="resources-page" style={{ flexGrow: 1 }}>
             <IntroductionSection />
         </div>
     );

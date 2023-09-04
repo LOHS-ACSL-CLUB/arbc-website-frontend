@@ -1,0 +1,59 @@
+@import "/src/variables";
+
+.mission-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .content {
+        max-width: 1500px;
+        margin: 100px 0;
+        padding: $mobile-padding;
+
+        h2 {
+            text-align: center;
+            color: #111827;
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 48px;
+            margin-bottom: 100px;
+        }
+
+        p {
+            color: #6b7280;
+            font-size: 18px;
+            line-height: 50px;
+        }
+
+        .who-we-are {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .members {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 1200px;
+
+                img {
+                    width: 100%;
+                    max-width: 600px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $threshold) {
+    .mission-section {
+        .content {
+            p {
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+}
