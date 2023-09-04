@@ -1,6 +1,6 @@
 @import "src/variables";
 
-.competition-page {
+.chapters-page {
     .introduction-section {
         box-sizing: border-box;
         background-image: url("/src/assets/placeholder.png");
@@ -19,10 +19,10 @@
 
             h2 {
                 color: $white1;
-                font-size: 52px;
+                text-align: center;
+                font-size: 72px;
                 font-weight: 800;
-                margin-bottom: 20px;
-                line-height: 65px;
+                line-height: 72px;
             }
 
             p {
@@ -42,6 +42,7 @@
                 h2 {
                     font-size: 35px;
                     line-height: 50px;
+                    text-align: left;
                 }
             }
         }
