@@ -1,4 +1,8 @@
+@import "/src/variables";
+
 .nav {
+    transition: 0.2s;
+
     .list-nav {
         list-style: none;
         margin-right: 40px;
@@ -29,7 +33,7 @@
         }
     }
 
-    @media screen and (min-width: 551px) {
+    @media screen and (min-width: $threshold) {
         .list-nav {
             display: initial;
         }
@@ -39,7 +43,7 @@
         }
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: $threshold) {
         .list-nav {
             display: none;
         }

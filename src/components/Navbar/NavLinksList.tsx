@@ -1,27 +1,36 @@
 import { Link } from "react-router-dom";
+import { PAGES } from "./pages";
+import { useState } from "react";
 
 interface Props extends React.ComponentPropsWithoutRef<"ul"> {
-    onAnyLinkClick?(): void;
+    onLinkClick?(index: number): void;
 }
 
-function NavLinksList({ onAnyLinkClick, ...props }: Props) {
+function NavLinksList({ onLinkClick, ...props }: Props) {
+    const [currentPageIndex, setCurrentPageIndex] = useState(0);
+
+    const handleLinkClick = (index: number) => {
+        setCurrentPageIndex(index);
+        onLinkClick?.(index);
+    };
+
     return (
-        <ul {...props} onClick={onAnyLinkClick}>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/competition">Competition</Link>
-            </li>
-            <li>
-                <Link to="/resources">Resources</Link>
-            </li>
-            <li>
-                <Link to="/chapters">Chapters</Link>
-            </li>
-            <li>
-                <Link to="/about">About</Link>
-            </li>
+        <ul {...props}>
+            {PAGES.map(({ route, name }, index) => {
+                return (
+                    <li key={route}>
+                        <Link
+                            to={route}
+                            style={{
+                                color: index == currentPageIndex ? "#000" : "",
+                            }}
+                            onClick={() => handleLinkClick(index)}
+                        >
+                            {name}
+                        </Link>
+                    </li>
+                );
+            })}
         </ul>
     );
 }
