@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { PAGES } from "./pages";
 import { useState } from "react";
 
@@ -7,7 +7,12 @@ interface Props extends React.ComponentPropsWithoutRef<"ul"> {
 }
 
 function NavLinksList({ onLinkClick, ...props }: Props) {
-    const [currentPageIndex, setCurrentPageIndex] = useState(0);
+    const location = useLocation();
+    const [currentPageIndex, setCurrentPageIndex] = useState(
+        PAGES.findIndex(({ route }) => {
+            return route === location.pathname;
+        })
+    );
 
     const handleLinkClick = (index: number) => {
         setCurrentPageIndex(index);
@@ -22,7 +27,7 @@ function NavLinksList({ onLinkClick, ...props }: Props) {
                         <Link
                             to={route}
                             style={{
-                                color: index == currentPageIndex ? "#000" : "",
+                                color: index === currentPageIndex ? "#000" : "",
                             }}
                             onClick={() => handleLinkClick(index)}
                         >
