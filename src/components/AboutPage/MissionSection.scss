@@ -31,6 +31,19 @@
             flex-direction: column;
             align-items: center;
 
+            h2 {
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 48px;
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+
+                background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
             .members {
                 display: flex;
                 flex-wrap: wrap;
