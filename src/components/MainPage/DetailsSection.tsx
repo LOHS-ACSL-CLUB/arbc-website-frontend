@@ -1,7 +1,7 @@
 import { BiLinkExternal } from "react-icons/bi";
-import roundsImg from "assets/imgs/introduction-section/rounds.png";
-import studentImg1 from "assets/imgs/introduction-section/students-img1.png";
-import studentImg2 from "assets/imgs/introduction-section/students-img2.png";
+import roundsImg from "assets/introduction/rounds.png";
+import studentImg1 from "assets/introduction/students-img1.png";
+import studentImg2 from "assets/introduction/students-img2.png";
 import "./DetailsSection.scss";
 import { Link } from "react-router-dom";
 

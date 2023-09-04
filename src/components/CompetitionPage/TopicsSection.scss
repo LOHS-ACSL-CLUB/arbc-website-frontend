@@ -1,0 +1,14 @@
+@import "/src/variables";
+
+.topics-section {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f7fc;
+    padding: 100px 0;
+
+    img {
+        width: 100%;
+        max-width: 1500px;
+        object-fit: cover;
+    }
+}

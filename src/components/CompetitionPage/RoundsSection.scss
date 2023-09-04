@@ -1,0 +1,79 @@
+@import "/src/variables";
+
+.rounds-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        max-width: 1500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $mobile-padding;
+
+        .texts {
+            h2 {
+                color: #111827;
+                text-align: center;
+                font-size: 48px;
+                font-weight: 800;
+                line-height: 48px;
+            }
+
+            p {
+                color: #6b7280;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 50px;
+                margin-bottom: 100px;
+            }
+        }
+
+        .rounds {
+            margin-bottom: 200px;
+
+            .round {
+                margin-bottom: 20px;
+                border-radius: 4px;
+                background: #f3f4f6;
+                box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06),
+                    0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+                max-width: 720px;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 28px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+
+                    b {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $threshold) {
+    .rounds-section {
+        .content {
+            .texts {
+                p {
+                    font-size: 14px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
