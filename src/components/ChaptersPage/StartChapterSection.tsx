@@ -10,7 +10,9 @@ function StartChapterSection() {
                     Start a Biology Bowl chapter at your school and gain access
                     to practice material, support, and more from our team!
                 </p>
-                <Link to="https://placeholder.com">Start a Chapter</Link>
+                <Link to="https://docs.google.com/forms/d/1sjg-nlGddNjsCz5EK3pXgi-L0iDX5E_Cx05EQQ_xepc/viewform?edit_requested=true">
+                    Start a Chapter
+                </Link>
             </div>
         </div>
     );
