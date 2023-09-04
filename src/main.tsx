@@ -7,7 +7,7 @@ import ReactDOM from "react-dom/client";
 import {
     Route,
     RouterProvider,
-    createHashRouter,
+    createBrowserRouter,
     createRoutesFromElements,
 } from "react-router-dom";
 import MainPage from "./components/MainPage/index.tsx";
@@ -15,7 +15,7 @@ import "./index.scss";
 import ErrorPage from "components/ErrorPage/index.tsx";
 import AppLayout from "AppLayout.tsx";
 
-const router = createHashRouter(
+const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
             path="/"
