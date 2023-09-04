@@ -11,14 +11,14 @@ interface Props {
     news: NewsType[];
 }
 
-function OneNews({ title, content, date }: NewsType) {
+function OneNews({ title, content }: NewsType) {
     return (
         <div className="one-news">
             <div className="heading">
                 <h2>{title}</h2>
-                <p className="date">
+                {/* <p className="date">
                     {date.toLocaleString(DateTime.DATE_FULL)}
-                </p>
+                </p> */}
             </div>
             <div className="content">{content}</div>
         </div>
