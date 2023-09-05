@@ -20,12 +20,12 @@ function DetailsSection() {
                             American Regional Biology Competition&nbsp;
                             <BiLinkExternal />
                         </Link>
-                        &nbsp; is an international nonprofit organization
-                        devoted to increasing student interest in biology and
-                        providing recognition for outstanding achievement.
-                        Southern California ARBC - a chapter of American
-                        Regional Biology Competition - hosts, manages, or
-                        supports 2 Regionals in Southern California.
+                        &nbsp; is a national nonprofit organization devoted to
+                        increasing student interest in biology and providing
+                        recognition for outstanding achievement. Southern
+                        California ARBC - a chapter of American Regional Biology
+                        Competition - hosts, manages, or supports 2 Regionals in
+                        Southern California.
                     </p>
                 </div>
                 <div className="row">

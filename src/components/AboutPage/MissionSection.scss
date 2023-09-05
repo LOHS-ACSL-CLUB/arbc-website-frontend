@@ -7,8 +7,8 @@
 
     .content {
         max-width: 1500px;
-        margin: 100px 0;
-        padding: $mobile-padding;
+        margin: 50px 0;
+        padding: 0 $mobile-padding;
 
         h2 {
             text-align: center;
@@ -16,7 +16,7 @@
             font-size: 48px;
             font-weight: 800;
             line-height: 48px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
 
         p {
@@ -26,7 +26,7 @@
         }
 
         .who-we-are {
-            margin-top: 100px;
+            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
