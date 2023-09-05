@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./RoundsSection.scss";
 
 function RoundsSection() {
@@ -24,6 +25,9 @@ function RoundsSection() {
                         held online.
                     </p>
                 </div>
+                <Link to="https://placeholder.com" target="_blank">
+                    Rules and Logistics
+                </Link>
                 <div className="texts">
                     <h2>Competition Rounds</h2>
                     <p>

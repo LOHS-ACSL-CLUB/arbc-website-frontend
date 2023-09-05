@@ -15,6 +15,7 @@ function DetailsSection() {
                         <Link
                             to="https://www.biologycompetition.org"
                             target="_blank"
+                            className="link-external"
                         >
                             American Regional Biology Competition&nbsp;
                             <BiLinkExternal />

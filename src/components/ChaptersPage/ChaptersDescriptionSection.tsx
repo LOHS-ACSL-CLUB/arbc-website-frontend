@@ -8,20 +8,20 @@ function ChaptersDescriptionSection() {
                 <div>
                     <h2>What Are Chapters?</h2>
                     <p>
-                        We want <i>you</i> to create a Biology Bowl chapter at
-                        your school! Your chapter could be a new club at your
-                        school or a subdivision of an existing club (e.g.
-                        Biology Olympiad club). Becoming a chapter gives the
-                        club numerous benefits from the IBB. Moreover, it
-                        spreads interest in biology and emphasizes collaboration
-                        amongst chapter members!
+                        We want <i>you</i> to create a ARBC chapter at your
+                        school! Your chapter could be a new club at your school
+                        or a subdivision of an existing club (e.g. Biology
+                        Olympiad club). Becoming a chapter gives the club
+                        numerous benefits from the Southern California ARBC.
+                        Moreover, it spreads interest in biology and emphasizes
+                        collaboration amongst chapter members!
                     </p>
                     <p>
                         If you require assistance in making a biology club or
-                        IBB chapter at your school, please reach out to us
+                        ARBC chapter at your school, please reach out to us
                         at&nbsp;
-                        <Link to="mailto: internationalbiologybowl@gmail.com">
-                            internationalbiologybowl@gmail.com.
+                        <Link to="mailto: arbcsoutherncal@gmail.com">
+                            arbcsoutherncal@gmail.com.
                         </Link>
                     </p>
                 </div>

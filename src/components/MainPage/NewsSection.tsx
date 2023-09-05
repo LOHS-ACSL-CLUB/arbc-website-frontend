@@ -52,16 +52,12 @@ function NewsSection() {
                         <div className="name">Students</div>
                     </div>
                     <div className="stat">
-                        <div className="number">445</div>
+                        <div className="number">60+</div>
                         <div className="name">Teams</div>
                     </div>
                     <div className="stat">
-                        <div className="number">341</div>
+                        <div className="number">50+</div>
                         <div className="name">Schools</div>
-                    </div>
-                    <div className="stat">
-                        <div className="number">10</div>
-                        <div className="name">Counties</div>
                     </div>
                 </div>
             </div>
