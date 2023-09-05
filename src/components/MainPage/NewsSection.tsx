@@ -10,13 +10,12 @@ const NEWS: NewsType[] = [
             <>
                 <p>
                     The rules manuals were below and they are available for free
-                    at
-                    <br />
+                    at&nbsp;
                     <a
                         href="https://biologycompetition.org/assets/files/ARBC%20Official%20Rulebook.pdf"
                         target="_blank"
                     >
-                        https://biologycompetition.org/assets/files/ARBC%20Official%20Rulebook.pdf
+                        here
                     </a>
                     <br />
                     American Regional Biology Competition requests that all

@@ -8,7 +8,7 @@ function ResourcesSection() {
                 to="https://drive.google.com/drive/folders/1I0FQZueb78zwTBvpZ7mAutgzmQI32bZ3?usp=sharing"
                 target="_blank"
             >
-                https://drive.google.com/drive/folders/1I0FQZueb78zwTBvpZ7mAutgzmQI32bZ3?usp=sharing
+                Files
             </Link>
         </div>
     );

@@ -25,7 +25,10 @@ function RoundsSection() {
                         held online.
                     </p>
                 </div>
-                <Link to="https://placeholder.com" target="_blank">
+                <Link
+                    to="https://biologycompetition.org/assets/files/ARBC%20Official%20Rulebook.pdf"
+                    target="_blank"
+                >
                     Rules and Logistics
                 </Link>
                 <div className="texts">
