@@ -19,4 +19,8 @@ export const PAGES = [
         route: "/about",
         name: "About",
     },
+    {
+        route: "/sponsors",
+        name: "Sponsors",
+    },
 ];

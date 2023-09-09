@@ -8,7 +8,7 @@ function ChaptersDescriptionSection() {
                 <div>
                     <h2>What Are Chapters?</h2>
                     <p>
-                        We want <i>you</i> to create a ARBC chapter at your
+                        We want <i>you</i> to create an ARBC chapter at your
                         school! Your chapter could be a new club at your school
                         or a subdivision of an existing club (e.g. Biology
                         Olympiad club). Becoming a chapter gives the club
@@ -43,16 +43,16 @@ function ChaptersDescriptionSection() {
                 <div>
                     <h2>Chapter Benefits</h2>
                     <p>
-                        Access to unused and unreleased USABB and IBB Bowl Round
-                        questions along with answers.
+                        Access to sample ARBC Round questions along with
+                        answers.
                         <br />
-                        Access to online presentations about various topics from
-                        biology clubs across the nation in the material tested.
+                        Chapter or club leader will be given volunteer hours
+                        based on the number of participants
                         <br />
-                        Access to online handouts about various topics in the
-                        material tested.
+                        Access to online presentations on various topics from
+                        biology clubs across the nation
                         <br />
-                        The chapter will be featured on the IBB website.
+                        The chapter leader will be featured on the website.
                     </p>
                 </div>
             </div>

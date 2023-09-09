@@ -14,6 +14,7 @@ import MainPage from "./components/MainPage/index.tsx";
 import "./index.scss";
 import ErrorPage from "components/ErrorPage/index.tsx";
 import AppLayout from "AppLayout.tsx";
+import SponsorsPage from "components/SponsorsPage/index.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
                 <Route path="/resources" element={<ResourcesPage />} />
                 <Route path="/chapters" element={<ChaptersPage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/sponsors" element={<SponsorsPage />} />
             </Route>
         </Route>
     )
