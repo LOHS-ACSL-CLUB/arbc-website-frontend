@@ -12,15 +12,15 @@ export const PAGES = [
         name: "Resources",
     },
     {
+        route: "/sponsors",
+        name: "Sponsors",
+    },
+    {
         route: "/chapters",
         name: "Chapters",
     },
     {
         route: "/about",
         name: "About",
-    },
-    {
-        route: "/sponsors",
-        name: "Sponsors",
     },
 ];
