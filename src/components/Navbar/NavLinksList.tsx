@@ -26,9 +26,12 @@ function NavLinksList({ onLinkClick, ...props }: Props) {
                     <li key={route}>
                         <Link
                             to={route}
-                            style={{
-                                color: index === currentPageIndex ? "#000" : "",
-                            }}
+                            // style={{
+                            //     color: index === currentPageIndex ? "#000" : "",
+                            // }}
+                            className={
+                                index === currentPageIndex ? "active" : ""
+                            }
                             onClick={() => handleLinkClick(index)}
                         >
                             {name}

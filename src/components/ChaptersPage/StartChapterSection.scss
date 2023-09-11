@@ -1,10 +1,12 @@
 @import "/src/variables";
+@import "/src/dark_theme_button";
 
 .start-chapter-section {
     display: flex;
     justify-content: center;
     background-color: $white1;
     padding: 0 $mobile-padding;
+    background-color: var(--bg-color1);
 
     .content {
         max-width: 1000px;
@@ -19,6 +21,7 @@
             font-weight: 800;
             line-height: 48px;
             margin-bottom: 0;
+            color: var(--heading-color1);
         }
 
         p {
@@ -27,18 +30,12 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
+            color: var(--text-color2);
         }
 
         a {
             margin-top: 40px;
-            padding: 11px 20px;
-            border-radius: 6px;
-            background: #3b82f6;
-            color: #fff;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 24px;
+            @include darkThemeButton;
         }
     }
 }

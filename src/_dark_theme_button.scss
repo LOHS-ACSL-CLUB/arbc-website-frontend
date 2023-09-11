@@ -1,0 +1,22 @@
+@mixin darkThemeButton() {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--button-text-color);
+    padding: 20px 50px;
+    background: var(--button-bg-color1);
+    border-radius: 6px;
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    box-sizing: border-box;
+
+    &:hover {
+        background: var(--button-bg-hover-color);
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    }
+
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-repeat: no-repeat;
+}

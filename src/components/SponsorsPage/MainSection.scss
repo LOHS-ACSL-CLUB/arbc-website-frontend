@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--bg-color1);
 
     .content {
         margin-top: 100px;
@@ -12,7 +13,7 @@
 
         h2 {
             text-align: center;
-            color: #111827;
+            color: var(--heading-color1);
             font-size: 48px;
             font-weight: 800;
             line-height: 48px;
@@ -22,12 +23,13 @@
             font-size: 25px;
             font-weight: 700;
             line-height: 40px;
+            color: var(--special-text-color);
         }
 
         p,
         li,
         a {
-            color: #6b7280;
+            color: var(--text-color2);
             font-size: 18px;
             line-height: 40px;
         }
@@ -41,7 +43,7 @@
 
             &.sponsors-tiers {
                 b {
-                    color: #000;
+                    color: var(--special-text-color);
                     font-size: 18px;
                     font-weight: 700;
                     line-height: 40px;

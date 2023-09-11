@@ -1,9 +1,10 @@
 import IntroductionSection from "./IntroductionSection";
 import ResourcesSection from "./ResourcesSection";
+import "./index.scss";
 
 function ResourcesPage() {
     return (
-        <div className="resources-page" style={{ flexGrow: 1 }}>
+        <div className="resources-page">
             <IntroductionSection />
             <ResourcesSection />
         </div>

@@ -1,7 +1,10 @@
+import AppLayout from "AppLayout.tsx";
 import AboutPage from "components/AboutPage/index.tsx";
 import ChaptersPage from "components/ChaptersPage/index.tsx";
 import CompetitionPage from "components/CompetitionPage/index.tsx";
+import ErrorPage from "components/ErrorPage/index.tsx";
 import ResourcesPage from "components/ResourcesPage/index.tsx";
+import SponsorsPage from "components/SponsorsPage/index.tsx";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -12,9 +15,6 @@ import {
 } from "react-router-dom";
 import MainPage from "./components/MainPage/index.tsx";
 import "./index.scss";
-import ErrorPage from "components/ErrorPage/index.tsx";
-import AppLayout from "AppLayout.tsx";
-import SponsorsPage from "components/SponsorsPage/index.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(

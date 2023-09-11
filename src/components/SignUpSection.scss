@@ -1,3 +1,5 @@
+@import "src/dark_theme_button";
+
 .sign-up-section {
     display: flex;
     justify-content: space-evenly;
@@ -5,6 +7,7 @@
     flex-wrap: wrap;
     gap: 10px 50px;
     padding: 30px 10px;
+    background-color: var(--bg-color1);
 
     .texts {
         display: flex;
@@ -15,17 +18,15 @@
 
         h2 {
             margin-bottom: 0;
+            color: var(--heading-color1);
         }
 
         p {
-            color: #6b7280;
+            color: var(--text-color2);
         }
     }
 
     a {
-        color: white;
-        background-color: #3b82f6;
-        border-radius: 6px;
-        padding: 15px 30px;
+        @include darkThemeButton;
     }
 }

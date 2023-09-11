@@ -62,21 +62,21 @@ function MainSection() {
                 <section className="sponsors-tiers">
                     <h2>Sponsors Tiers and Benefits</h2>
                     <p>
-                        <b>Platinum</b>: Sponsors with this designation are
+                        <b>Platinum:</b> Sponsors with this designation are
                         those who provided large-scale donations (equivalent in
                         value to $750 or more) to the organization as a whole,
                         to an individual ARBC region, or to the ARBC National
                         competition taking place in May 2024.
                     </p>
                     <p>
-                        <b>Gold</b>: Sponsors with this designation are those
+                        <b>Gold:</b> Sponsors with this designation are those
                         who provided large-scale donations (equivalent in value
                         up to $500) to the organization as a whole, to an
                         individual ARBC region, or to the ARBC National
                         competition taking place in May 2024.
                     </p>
                     <p>
-                        <b>Silver</b>: Sponsors with this designation are those
+                        <b>Silver:</b> Sponsors with this designation are those
                         who provided small-scale donations (equivalent in value
                         to $300 or less) to the organization as a whole, an
                         individual ARBC region, or to the ARBC National

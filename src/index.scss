@@ -5,6 +5,51 @@ body {
     min-height: 100vh;
 }
 
+body {
+    --bg-color1: white;
+    --bg-color2: #f3f4f6;
+    --bg-color3: #f3f4f6;
+
+    --text-color1: black;
+    --text-color2: #6b7280;
+
+    --heading-color1: #444;
+
+    --button-bg-color1: #dbeafe;
+    --button-bg-hover-color: #dbeafe;
+    --button-text-color: #1d4ed8;
+
+    --nav-link-color: #6b7280;
+    --nav-link-active-color: black;
+
+    --stats-color: #00458f;
+    --sponsors-bg-color: transparent;
+    --special-text-color: black;
+}
+
+body.dark-theme {
+    --bg-color1: #0c111b;
+    --bg-color2: #0c111b;
+    --bg-color3: #181d27;
+
+    --text-color1: white;
+    --text-color2: white;
+
+    --heading-color1: white;
+
+    --button-bg-color1: linear-gradient(#0c111b, #0c111b),
+        linear-gradient(#014690, #ffee89);
+    --button-bg-hover-color: linear-gradient(#00458f, #ffee89);
+    --button-text-color: white;
+
+    --nav-link-color: white;
+    --nav-link-active-color: #aaa;
+
+    --stats-color: #ffee89;
+    --sponsors-bg-color: white;
+    --special-text-color: #1d4ed8;
+}
+
 #root {
     display: flex;
     flex-direction: column;

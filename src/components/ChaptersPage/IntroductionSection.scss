@@ -1,37 +1,9 @@
 @import "src/variables";
+@import "src/partial_introduction";
 
 .chapters-page {
     .introduction-section {
-        box-sizing: border-box;
-        background-image: url("/src/assets/introduction.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        padding: 200px 0;
-
-        .content {
-            max-width: 1000px;
-            padding: 0 $mobile-padding;
-
-            h2 {
-                color: $white1;
-                text-align: center;
-                font-size: 72px;
-                font-weight: 800;
-                line-height: 72px;
-            }
-
-            p {
-                color: $white2;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 28px;
-            }
-        }
+        @include secondaryIntroduction;
     }
 
     @media screen and (max-width: $threshold) {

@@ -1,0 +1,36 @@
+@mixin basicIntroduction($padding: 200px 0) {
+    box-sizing: border-box;
+    background-image: url("/src/assets/introduction.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding;
+}
+
+@mixin secondaryIntroduction() {
+    @include basicIntroduction;
+
+    .content {
+        max-width: 1000px;
+        padding: 0 $mobile-padding;
+    }
+
+    h2 {
+        color: $white1;
+        font-size: 52px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 65px;
+    }
+
+    p {
+        color: $white2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}

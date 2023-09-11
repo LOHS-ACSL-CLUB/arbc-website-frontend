@@ -14,9 +14,13 @@
             a {
                 font-weight: 500;
                 font-size: 14px;
-                color: #6b7280;
+                color: var(--nav-link-color);
                 cursor: pointer;
                 text-decoration: none;
+
+                &.active {
+                    color: var(--nav-link-active-color);
+                }
             }
         }
     }
