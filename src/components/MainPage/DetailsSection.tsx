@@ -20,12 +20,12 @@ function DetailsSection() {
                             American Regional Biology Competition&nbsp;
                             <BiLinkExternal />
                         </Link>
-                        &nbsp; is a national nonprofit organization devoted to
-                        increasing student interest in biology and providing
-                        recognition for outstanding achievement. Southern
-                        California ARBC - a chapter of American Regional Biology
-                        Competition - hosts, manages, or supports 2 Regionals in
-                        Southern California.
+                        &nbsp; is an international nonprofit organization
+                        devoted to increasing student interest in biology and
+                        providing recognition for outstanding achievement.
+                        Southern California ARBC - a division of American
+                        Regional Biology Competition - hosts, manages, or
+                        supports 2 Regionals in Southern California.
                     </p>
                 </div>
                 <div className="row">
@@ -35,15 +35,16 @@ function DetailsSection() {
                             exploration
                         </h2>
                         <p>
-                            At a Team Biology Competition, students work
-                            together in teams of up to 4 to compete in 4 rounds.
-                            The round may change from year to year, covering
-                            fields and topics including: Molecular, Cellular,
-                            Chemical Biology, Genetics, Genomics, Evolutionary
-                            Genetics, Human Anatomy, Physiology, Medical
-                            Biology, Systematics, Bioinformatics, Integrative
-                            Biology, Ecology, Ethology, and Evolution. The
-                            rounds and their descriptions can be found&nbsp;
+                            At the competition, students will work together in
+                            teams of up to 4 to compete in four different
+                            rounds. The rounds may change from year to year,
+                            covering fields and topics including: Molecular,
+                            Cellular, Chemical Biology, Genetics, Genomics,
+                            Evolutionary Genetics, Human Anatomy, Physiology,
+                            Medical Biology, Systematics, Bioinformatics,
+                            Integrative Biology, Ecology, Ethology, and
+                            Evolution. The rounds and their descriptions can be
+                            found{" "}
                             <Link
                                 to="https://biologycompetition.org/assets/files/ARBC%20Official%20Rulebook.pdf"
                                 target="_blank"

@@ -17,10 +17,11 @@ const NEWS: NewsType[] = [
                     >
                         here
                     </a>
+                    .
                     <br />
                     American Regional Biology Competition requests that all
                     president and chapter leaders download their own copies and
-                    explain them to the participants The 2023 SoCal
+                    explain them to the participants The 2023 SoCal.
                 </p>
                 <p>Events and schedule will be available soon.</p>
             </>

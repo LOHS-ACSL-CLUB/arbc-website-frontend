@@ -14,7 +14,7 @@ function SponsorsSection() {
                 <p>
                     The American Regional Biology Bowl is proudly partnered with{" "}
                     <b>
-                        Art of Problem Solving, Biolympiads, Baology Prem and
+                        Art of Problem Solving, Biolympiads, Baology Prep and
                         Wolfram!
                     </b>
                 </p>

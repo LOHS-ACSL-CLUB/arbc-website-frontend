@@ -8,7 +8,7 @@ function SignUpSection() {
                 <h2>Ready to sign up?</h2>
                 <p>
                     Fill out the registration form to save your spot at the
-                    southern California Competition
+                    southern California Competition!
                 </p>
             </div>
 

@@ -18,23 +18,23 @@ function ChaptersDescriptionSection() {
                     </p>
                     <p>
                         If you require assistance in making a biology club or
-                        ARBC chapter at your school, please reach out to us
-                        at&nbsp;
+                        ARBC chapter at your school, please reach out to us at{" "}
                         <Link to="mailto: arbcsoutherncal@gmail.com">
-                            arbcsoutherncal@gmail.com.
+                            arbcsoutherncal@gmail.com
                         </Link>
+                        .
                     </p>
                 </div>
                 <div>
                     <h2>Chapter Expectations</h2>
                     <p>
-                        Must be a new or existing biology-related club
+                        Must be a new or existing biology-related club.
                         <br />
                         Chapter captains should teach and train the rest of
                         their team/chapter in the biological sciences to allow
-                        for the overall growth of all members
+                        for the overall growth of all members.
                         <br />
-                        Chapter captains should promote IBB events and
+                        Chapter captains should promote ARBC events and
                         competitions to its members and within the school as a
                         whole through means including, but not limited to,
                         social media, physical flyers, word-of-mouth, etc.
@@ -47,10 +47,10 @@ function ChaptersDescriptionSection() {
                         answers.
                         <br />
                         Chapter or club leader will be given volunteer hours
-                        based on the number of participants
+                        based on the number of participants.
                         <br />
                         Access to online presentations on various topics from
-                        biology clubs across the nation
+                        biology clubs across the nation.
                         <br />
                         The chapter leader will be featured on the website.
                     </p>

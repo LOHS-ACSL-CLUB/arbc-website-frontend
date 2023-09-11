@@ -40,7 +40,7 @@ function RoundsSection() {
                         all, cheating is not allowed and any interpretation of
                         the rules that would accommodate cheating is considered
                         an academic honesty violation. Students/Teams who are
-                        found to be in violation of ARBC's rules and/or
+                        found to be in violation of ARBC’s rules and/or
                         disruptive to the spirit or the orderly function of the
                         competition will have their scores disqualified and be
                         asked to leave the venue. Teams will consist of 4 or
@@ -55,7 +55,7 @@ function RoundsSection() {
                     <div className="round">
                         <h2>Individual Round (20%)</h2>
                         <p>
-                            <b>Time:</b> 60 minutes
+                            <b>Time:</b> 50 minutes
                         </p>
                         <p>
                             <b>Task:</b> You will be given 40 multiple-choice
@@ -110,11 +110,16 @@ function RoundsSection() {
                         </p>
                         <p>
                             <b>Task:</b> Answer 15 multiple true-false questions
-                            given to your team in order of increasing difficulty{" "}
+                            given to your team in order of increasing difficulty
                         </p>
                         <p>
-                            <b>Description:</b> You will be given 50
-                            multiple-choice questions to answer individually.
+                            <b>Description:</b> As a team students are given an
+                            IBO theoretical style MTF question with 4-5 parts.
+                            Upon completion, students are to turn in that
+                            question and get the next one. Each question will
+                            use steep MTF grading (e.g. 1.0/0.6/0.2/0/0) and
+                            teams cannot see the next question until completing
+                            the one.
                         </p>
                     </div>
                 </div>
