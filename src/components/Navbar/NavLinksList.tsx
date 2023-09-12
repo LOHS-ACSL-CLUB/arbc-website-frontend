@@ -4,11 +4,18 @@ import { PAGES } from "./pages";
 interface Props extends React.ComponentPropsWithoutRef<"ul"> {
     onLinkClick?(index: number): void;
     currentPageIndex: number;
+    setCurrentPageIndex(index: number): void;
 }
 
-function NavLinksList({ onLinkClick, currentPageIndex, ...props }: Props) {
+function NavLinksList({
+    onLinkClick,
+    currentPageIndex,
+    setCurrentPageIndex,
+    ...props
+}: Props) {
     const handleLinkClick = (index: number) => {
         onLinkClick?.(index);
+        setCurrentPageIndex(index);
     };
 
     return (

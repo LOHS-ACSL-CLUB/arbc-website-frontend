@@ -41,6 +41,8 @@ function Navbar() {
                 <Nav
                     showCollapsedNav={showCollapsedNav}
                     setShowCollapsedNav={setShowCollapsedNav}
+                    currentPageIndex={currentPageIndex}
+                    setCurrentPageIndex={setCurrentPageIndex}
                 />
             </div>
 
@@ -48,6 +50,7 @@ function Navbar() {
                 className={`collapsed-links ${showCollapsedNav ? "show" : ""}`}
                 onLinkClick={onLinkClick}
                 currentPageIndex={currentPageIndex}
+                setCurrentPageIndex={setCurrentPageIndex}
             />
         </div>
     );
