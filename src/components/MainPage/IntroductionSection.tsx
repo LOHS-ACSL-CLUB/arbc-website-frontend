@@ -5,7 +5,9 @@ function IntroductionSection() {
     return (
         <div className="introduction-section">
             <div className="content">
-                <h1>American Regional Biology Competition</h1>
+                <h1>
+                    Southern California American Regional Biology Competition
+                </h1>
                 <p>
                     Organization dedicated to fostering interest in biology
                     among high-school students through competition and
