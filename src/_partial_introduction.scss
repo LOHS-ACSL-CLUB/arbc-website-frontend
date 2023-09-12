@@ -1,6 +1,6 @@
 @mixin basicIntroduction($padding: 200px 0) {
+    background: url("/src/assets/introduction.png");
     box-sizing: border-box;
-    background-image: url("/src/assets/introduction.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

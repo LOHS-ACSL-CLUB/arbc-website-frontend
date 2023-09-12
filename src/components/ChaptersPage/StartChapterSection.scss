@@ -1,5 +1,4 @@
 @import "/src/variables";
-@import "/src/dark_theme_button";
 
 .start-chapter-section {
     display: flex;
@@ -31,11 +30,6 @@
             font-weight: 400;
             line-height: 28px;
             color: var(--text-color2);
-        }
-
-        a {
-            margin-top: 40px;
-            @include darkThemeButton;
         }
     }
 }

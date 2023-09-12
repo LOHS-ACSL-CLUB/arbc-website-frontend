@@ -30,11 +30,11 @@ function ChaptersDescriptionSection() {
                     <p>
                         Must be a new or existing biology-related club.
                         <br />
-                        Chapter captains should teach and train the rest of
-                        their team/chapter in the biological sciences to allow
-                        for the overall growth of all members.
+                        Chapter leaders should teach and train the rest of their
+                        team/chapter in the biological sciences to allow for the
+                        overall growth of all members
                         <br />
-                        Chapter captains should promote ARBC events and
+                        Chapter leaders should promote ARBC events and
                         competitions to its members and within the school as a
                         whole through means including, but not limited to,
                         social media, physical flyers, word-of-mouth, etc.

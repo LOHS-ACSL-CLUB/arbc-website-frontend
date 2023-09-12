@@ -40,7 +40,7 @@ function RoundsSection() {
                         all, cheating is not allowed and any interpretation of
                         the rules that would accommodate cheating is considered
                         an academic honesty violation. Students/Teams who are
-                        found to be in violation of ARBC’s rules and/or
+                        found to be in violation of ARBC's rules and/or
                         disruptive to the spirit or the orderly function of the
                         competition will have their scores disqualified and be
                         asked to leave the venue. Teams will consist of 4 or

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "./IntroductionSection.scss";
+import GradientButton from "components/GradientButton";
 
 function IntroductionSection() {
     return (
@@ -7,13 +7,24 @@ function IntroductionSection() {
             <div className="content">
                 <h1>American Regional Biology Competition</h1>
                 <p>
-                    The first organization dedicated to fostering interest in
-                    biology among high-school students through competition and
-                    collaboration.
+                    Organization dedicated to fostering interest in biology
+                    among high-school students through competition and
+                    collaboration
                 </p>
-                <Link to="https://forms.gle/jeHbp6dtFdqBPUDU8" target="_blank">
+                <GradientButton
+                    width={155}
+                    height={55}
+                    onClick={() =>
+                        window
+                            .open(
+                                "https://forms.gle/jeHbp6dtFdqBPUDU8",
+                                "_blank"
+                            )
+                            ?.focus()
+                    }
+                >
                     Register
-                </Link>
+                </GradientButton>
             </div>
         </div>
     );

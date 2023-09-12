@@ -1,5 +1,3 @@
-@import "src/dark_theme_button";
-
 .sign-up-section {
     display: flex;
     justify-content: space-evenly;
@@ -24,9 +22,5 @@
         p {
             color: var(--text-color2);
         }
-    }
-
-    a {
-        @include darkThemeButton;
     }
 }

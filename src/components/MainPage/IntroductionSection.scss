@@ -1,6 +1,5 @@
 @import "src/partial_introduction";
 @import "src/variables";
-@import "src/dark_theme_button";
 
 .main-page {
     .introduction-section {
@@ -28,11 +27,6 @@
             font-weight: 700;
             text-align: center;
             line-height: 28px;
-        }
-
-        a {
-            @include darkThemeButton;
-            margin-top: 50px;
         }
     }
 }
