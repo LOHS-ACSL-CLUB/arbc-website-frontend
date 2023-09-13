@@ -51,6 +51,8 @@ function Navbar() {
                 onLinkClick={onLinkClick}
                 currentPageIndex={currentPageIndex}
                 setCurrentPageIndex={setCurrentPageIndex}
+                setShowCollapsedNav={setShowCollapsedNav}
+                showCollapsedNav={showCollapsedNav}
             />
         </div>
     );

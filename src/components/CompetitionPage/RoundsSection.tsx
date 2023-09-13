@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "./RoundsSection.scss";
+import GradientButton from "components/GradientButton";
 
 function RoundsSection() {
     return (
@@ -25,12 +25,20 @@ function RoundsSection() {
                         held online.
                     </p>
                 </div>
-                <Link
-                    to="https://biologycompetition.org/assets/files/ARBC%20Official%20Rulebook.pdf"
-                    target="_blank"
+                <GradientButton
+                    width={240}
+                    height={60}
+                    onClick={() =>
+                        window
+                            .open(
+                                "https://biologycompetition.org/assets/files/ARBC%20Official%20Rulebook.pdf",
+                                "_blank"
+                            )
+                            ?.focus()
+                    }
                 >
                     Rules and Logistics
-                </Link>
+                </GradientButton>
                 <div className="texts">
                     <h2>Competition Rounds</h2>
                     <p>
@@ -50,6 +58,7 @@ function RoundsSection() {
                         Teams is finalized January 1st, no team members may be
                         substituted or changed after the date.
                     </p>
+                    G
                 </div>
                 <div className="rounds">
                     <div className="round">

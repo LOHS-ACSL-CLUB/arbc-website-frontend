@@ -12,16 +12,13 @@ function SignUpSection() {
                 </p>
             </div>
 
-            {/* <Link to="https://forms.gle/jeHbp6dtFdqBPUDU8" target="_blank">
-                Register
-            </Link> */}
             <GradientButton
                 width={155}
                 height={55}
                 onClick={() =>
                     window
                         .open("https://forms.gle/jeHbp6dtFdqBPUDU8", "_blank")
-                        ?.open()
+                        ?.focus()
                 }
             >
                 Register

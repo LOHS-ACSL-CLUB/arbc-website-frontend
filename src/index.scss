@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Inter, sans-serif;
     min-height: 100vh;
+    background-color: var(--bg-color1);
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 
     --nav-link-color: #6b7280;
     --nav-link-active-color: black;
+    --nav-link-hover-color: #454545;
 
     --stats-color: #00458f;
     --sponsors-bg-color: transparent;
@@ -37,15 +39,14 @@ body.dark-theme {
 
     --heading-color1: white;
 
-    // --button-bg-color1: linear-gradient(#0c111b, #0c111b),
-    //     linear-gradient(#014690, #ffee89);
     --button-bg-color1: linear-gradient(#00458f, #ffee89);
     --button-bg-color2: linear-gradient(#0c111b, #0c111b);
     --button-bg-hover-color: linear-gradient(#00458f, #ffee89);
     --button-text-color: white;
 
     --nav-link-color: white;
-    --nav-link-active-color: #aaa;
+    --nav-link-active-color: #1338be;
+    --nav-link-hover-color: #73c2fb;
 
     --stats-color: #ffee89;
     --sponsors-bg-color: white;

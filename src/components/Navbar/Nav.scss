@@ -17,8 +17,13 @@
                 color: var(--nav-link-color);
                 cursor: pointer;
                 text-decoration: none;
+                transition: 0.2s;
 
                 &.active {
+                    color: var(--nav-link-active-color);
+                }
+
+                &:hover {
                     color: var(--nav-link-active-color);
                 }
             }
@@ -34,6 +39,7 @@
         svg {
             width: 30px;
             height: 30px;
+            color: var(--text-color2);
         }
     }
 

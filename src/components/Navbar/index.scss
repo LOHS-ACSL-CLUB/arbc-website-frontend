@@ -27,6 +27,14 @@
             opacity: 1;
         }
 
+        a.active {
+            color: var(--nav-link-active-color);
+        }
+
+        a:hover {
+            color: var(--nav-link-active-color);
+        }
+
         li {
             transition: 0.2s;
             cursor: pointer;

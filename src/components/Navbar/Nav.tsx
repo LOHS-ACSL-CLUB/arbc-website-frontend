@@ -21,6 +21,8 @@ function Nav({
                 className="list-nav"
                 currentPageIndex={currentPageIndex}
                 setCurrentPageIndex={setCurrentPageIndex}
+                setShowCollapsedNav={setShowCollapsedNav}
+                showCollapsedNav={showCollapsedNav}
             />
 
             <button

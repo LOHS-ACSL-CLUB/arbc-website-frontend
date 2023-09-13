@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .sponsors-section {
     display: flex;
     justify-content: center;
@@ -34,6 +36,7 @@
             background-color: var(--sponsors-bg-color);
             border-radius: 30px;
             padding: 0 20px;
+            margin: 0 $mobile-padding;
 
             img {
                 width: 256px;
