@@ -2,7 +2,6 @@ import "./MissionSection.scss";
 import member1 from "assets/about/member1.png";
 import member2 from "assets/about/member2.png";
 import member3 from "assets/about/member3.png";
-import member4 from "assets/about/member4.png";
 
 function MissionSection() {
     return (
@@ -53,7 +52,6 @@ function MissionSection() {
                         <img src={member1} />
                         <img src={member2} />
                         <img src={member3} />
-                        <img src={member4} />
                     </div>
                 </div>
             </div>
