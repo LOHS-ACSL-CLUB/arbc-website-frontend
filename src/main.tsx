@@ -15,27 +15,31 @@ import {
 } from "react-router-dom";
 import MainPage from "./components/MainPage/index.tsx";
 import "./index.scss";
+import SignInPage from "components/SignInPage/index.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route
-            path="/"
-            element={<AppLayout />}
-            errorElement={
-                <AppLayout>
-                    <ErrorPage />
-                </AppLayout>
-            }
-        >
-            <Route errorElement={<ErrorPage />}>
-                <Route index element={<MainPage />} />
-                <Route path="/competition" element={<CompetitionPage />} />
-                <Route path="/resources" element={<ResourcesPage />} />
-                <Route path="/chapters" element={<ChaptersPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/sponsors" element={<SponsorsPage />} />
+        <>
+            <Route
+                path="/"
+                element={<AppLayout />}
+                errorElement={
+                    <AppLayout>
+                        <ErrorPage />
+                    </AppLayout>
+                }
+            >
+                <Route errorElement={<ErrorPage />}>
+                    <Route index element={<MainPage />} />
+                    <Route path="/competition" element={<CompetitionPage />} />
+                    <Route path="/resources" element={<ResourcesPage />} />
+                    <Route path="/chapters" element={<ChaptersPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/sponsors" element={<SponsorsPage />} />
+                </Route>
             </Route>
-        </Route>
+            <Route path="/sign-in" element={<SignInPage />} />
+        </>
     )
 );
 
