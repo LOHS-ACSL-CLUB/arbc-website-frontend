@@ -39,9 +39,9 @@ body.dark-theme {
 
     --heading-color1: white;
 
-    --button-bg-color1: linear-gradient(#00458f, #ffee89);
+    --button-bg-color1: linear-gradient(#0a4c90, #819b8d);
     --button-bg-color2: linear-gradient(#0c111b, #0c111b);
-    --button-bg-hover-color: linear-gradient(#00458f, #ffee89);
+    --button-bg-hover-color: var(--button-bg-color1);
     --button-text-color: white;
 
     --nav-link-color: white;
