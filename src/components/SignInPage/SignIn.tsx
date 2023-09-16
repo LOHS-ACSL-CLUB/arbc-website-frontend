@@ -63,15 +63,15 @@ function SignIn() {
         try {
             await axios({
                 method: "post",
-                url: "https://arbc-backend-1osk.vercel.app/api/v1/members/",
+                url: "https://arbc-backend-7w2y-iyciko8k8-par26.vercel.app/api/v1/members",
                 headers: { "Content-Type": "multipart/form-data" },
                 data: formData,
             });
+
+            alert("Sent Successful!");
         } catch {
             alert("Request Failed");
         }
-
-        alert("Sent Successful!");
     }
 
     return (
