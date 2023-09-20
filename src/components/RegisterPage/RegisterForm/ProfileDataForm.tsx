@@ -1,14 +1,21 @@
 interface ProfileData {
     schoolName: string;
-    grade: string;
+    grade: number;
     city: string;
+    phone: string;
 }
 
 interface Props extends ProfileData {
     updateFields(field: Partial<ProfileData>): void;
 }
 
-function ProfileDataForm({ schoolName, grade, city, updateFields }: Props) {
+function ProfileDataForm({
+    schoolName,
+    grade,
+    city,
+    updateFields,
+    phone,
+}: Props) {
     return (
         <>
             <div>
@@ -25,14 +32,19 @@ function ProfileDataForm({ schoolName, grade, city, updateFields }: Props) {
             </div>
 
             <div>
-                <label htmlFor="grade">Grade</label>
+                <label htmlFor="grade">Grade (8-12)</label>
                 <input
                     id="grade"
                     name="grade"
-                    placeholder="Grade"
+                    placeholder="Grade (8-12)"
                     required
                     value={grade}
-                    onChange={e => updateFields({ grade: e.target.value })}
+                    type="number"
+                    onChange={e =>
+                        updateFields({ grade: e.target.valueAsNumber })
+                    }
+                    min={8}
+                    max={12}
                 />
             </div>
 
@@ -45,6 +57,18 @@ function ProfileDataForm({ schoolName, grade, city, updateFields }: Props) {
                     required
                     value={city}
                     onChange={e => updateFields({ city: e.target.value })}
+                />
+            </div>
+
+            <div>
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                    value={phone}
+                    onChange={e => updateFields({ phone: e.target.value })}
                 />
             </div>
         </>

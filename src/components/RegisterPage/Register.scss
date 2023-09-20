@@ -1,0 +1,66 @@
+@import "src/variables";
+
+.register {
+    width: 700px;
+    height: 1000px;
+    background-color: var(--bg-color3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+        color: var(--text-color1);
+        display: block;
+        margin-bottom: 0.5em;
+        font-size: 14px;
+    }
+
+    .socal-logo {
+        width: 200px;
+        margin-bottom: -5em;
+    }
+
+    input {
+        background-color: #f4f4f5;
+        border-radius: 4px;
+        width: 35em;
+        min-height: 2.5em;
+        margin-bottom: 1.5em;
+        font-family: inherit;
+        font-size: 14px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1em;
+        font-size: 14px;
+
+        .previous {
+            background: none;
+            border: none;
+            font-family: inherit;
+            color: var(--text-color2);
+            cursor: pointer;
+            padding: 1em 2em;
+            font-size: inherit;
+        }
+
+        .next {
+            color: var(--text-color1);
+            border-radius: 4px;
+            border: none;
+            background-color: #2563eb;
+            padding: 1em 2em;
+            cursor: pointer;
+            font-size: inherit;
+            font-family: inherit;
+        }
+    }
+}
+
+@media screen and (max-width: $threshold) {
+    .register {
+        height: fit-content;
+    }
+}

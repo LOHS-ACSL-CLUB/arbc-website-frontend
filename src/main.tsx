@@ -3,6 +3,7 @@ import AboutPage from "components/AboutPage/index.tsx";
 import ChaptersPage from "components/ChaptersPage/index.tsx";
 import CompetitionPage from "components/CompetitionPage/index.tsx";
 import ErrorPage from "components/ErrorPage/index.tsx";
+import RegisterPage from "components/RegisterPage/index.tsx";
 import ResourcesPage from "components/ResourcesPage/index.tsx";
 import SponsorsPage from "components/SponsorsPage/index.tsx";
 import React from "react";
@@ -15,7 +16,6 @@ import {
 } from "react-router-dom";
 import MainPage from "./components/MainPage/index.tsx";
 import "./index.scss";
-import SignInPage from "components/SignInPage/index.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -38,7 +38,7 @@ const router = createBrowserRouter(
                     <Route path="/sponsors" element={<SponsorsPage />} />
                 </Route>
             </Route>
-            <Route path="/sign-in" element={<SignInPage />} />
+            <Route path="/register" element={<RegisterPage />} />
         </>
     )
 );
