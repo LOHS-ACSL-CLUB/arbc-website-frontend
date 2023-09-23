@@ -1,7 +1,10 @@
 import "./SignUpSection.scss";
 import GradientButton from "./GradientButton";
+import { useNavigate } from "react-router";
 
 function SignUpSection() {
+    const navigate = useNavigate();
+
     return (
         <div className="sign-up-section">
             <div className="texts">
@@ -15,11 +18,7 @@ function SignUpSection() {
             <GradientButton
                 width={155}
                 height={55}
-                onClick={() =>
-                    window
-                        .open("https://forms.gle/jeHbp6dtFdqBPUDU8", "_blank")
-                        ?.focus()
-                }
+                onClick={() => navigate("/register")}
             >
                 Register
             </GradientButton>
