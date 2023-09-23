@@ -84,6 +84,8 @@ function Register() {
         }
 
         try {
+            alert("Registering... please click OK and wait for a moment.");
+
             await axios({
                 method: "post",
                 // url: "http://localhost:9000/new",
