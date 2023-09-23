@@ -1,0 +1,64 @@
+@import "src/variables";
+
+.step-display {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 $mobile-padding;
+
+    .steps {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 5em;
+        z-index: 2;
+        position: relative;
+    }
+
+    .line {
+        border: 1px solid var(--text-color1);
+        position: relative;
+        top: 1.1em;
+    }
+
+    .step {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-number {
+        background-color: white;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step-description {
+        color: var(--text-color1);
+        margin-top: 0.5em;
+        margin-bottom: 2em;
+        text-align: center;
+        max-width: 8em;
+    }
+
+    .step.active {
+        .step-number {
+            background-color: #2563eb;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: $threshold) {
+    .step-display {
+        padding: 0;
+
+        .steps {
+            gap: $mobile-padding;
+        }
+    }
+}

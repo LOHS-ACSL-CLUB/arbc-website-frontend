@@ -3,6 +3,7 @@ import AboutPage from "components/AboutPage/index.tsx";
 import ChaptersPage from "components/ChaptersPage/index.tsx";
 import CompetitionPage from "components/CompetitionPage/index.tsx";
 import ErrorPage from "components/ErrorPage/index.tsx";
+import RegisterPage from "components/RegisterPage/index.tsx";
 import ResourcesPage from "components/ResourcesPage/index.tsx";
 import SponsorsPage from "components/SponsorsPage/index.tsx";
 import React from "react";
@@ -18,24 +19,27 @@ import "./index.scss";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route
-            path="/"
-            element={<AppLayout />}
-            errorElement={
-                <AppLayout>
-                    <ErrorPage />
-                </AppLayout>
-            }
-        >
-            <Route errorElement={<ErrorPage />}>
-                <Route index element={<MainPage />} />
-                <Route path="/competition" element={<CompetitionPage />} />
-                <Route path="/resources" element={<ResourcesPage />} />
-                <Route path="/chapters" element={<ChaptersPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/sponsors" element={<SponsorsPage />} />
+        <>
+            <Route
+                path="/"
+                element={<AppLayout />}
+                errorElement={
+                    <AppLayout>
+                        <ErrorPage />
+                    </AppLayout>
+                }
+            >
+                <Route errorElement={<ErrorPage />}>
+                    <Route index element={<MainPage />} />
+                    <Route path="/competition" element={<CompetitionPage />} />
+                    <Route path="/resources" element={<ResourcesPage />} />
+                    <Route path="/chapters" element={<ChaptersPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/sponsors" element={<SponsorsPage />} />
+                </Route>
             </Route>
-        </Route>
+            <Route path="/register" element={<RegisterPage />} />
+        </>
     )
 );
 
