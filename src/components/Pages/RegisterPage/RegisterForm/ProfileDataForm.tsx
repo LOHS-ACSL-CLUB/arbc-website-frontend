@@ -1,4 +1,4 @@
-import ValidationInput from "components/ValidationInput";
+import ValidationInput from "components/Utils/ValidationInput";
 import { useEffect, useState } from "react";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input/input";
 

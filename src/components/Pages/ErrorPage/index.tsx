@@ -1,6 +1,6 @@
 import { useNavigate, useRouteError } from "react-router-dom";
 import "./index.scss";
-import GradientButton from "components/GradientButton";
+import GradientButton from "components/Utils/GradientButton";
 
 type Error = {
     statusText?: string;

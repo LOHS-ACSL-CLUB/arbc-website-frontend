@@ -7,7 +7,7 @@ import PersonalInformationForm, {
     ShowValidations,
 } from "./RegisterForm/PersonalInformationForm";
 import ProfileDataForm from "./RegisterForm/ProfileDataForm";
-import StepDisplay from "components/StepDisplay";
+import StepDisplay from "components/Utils/StepDisplay";
 import { useNavigate } from "react-router-dom";
 
 type RegisterFormData = {

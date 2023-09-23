@@ -1,5 +1,5 @@
 import "./SignUpSection.scss";
-import GradientButton from "./GradientButton";
+import GradientButton from "./Utils/GradientButton";
 import { useNavigate } from "react-router";
 
 function SignUpSection() {

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import "./IntroductionSection.scss";
-import GradientButton from "components/GradientButton";
+import GradientButton from "components/Utils/GradientButton";
 
 function IntroductionSection() {
     const navigate = useNavigate();

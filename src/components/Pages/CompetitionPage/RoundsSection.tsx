@@ -1,5 +1,5 @@
 import "./RoundsSection.scss";
-import GradientButton from "components/GradientButton";
+import GradientButton from "components/Utils/GradientButton";
 
 function RoundsSection() {
     return (

@@ -1,5 +1,5 @@
 import "./StartChapterSection.scss";
-import GradientButton from "components/GradientButton";
+import GradientButton from "components/Utils/GradientButton";
 
 function StartChapterSection() {
     return (
