@@ -1,4 +1,10 @@
+@import "src/variables";
+
 .step-display {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 $mobile-padding;
+
     .steps {
         display: flex;
         justify-content: center;
@@ -43,6 +49,16 @@
         .step-number {
             background-color: #2563eb;
             color: white;
+        }
+    }
+}
+
+@media screen and (max-width: $threshold) {
+    .step-display {
+        padding: 0;
+
+        .steps {
+            gap: $mobile-padding;
         }
     }
 }

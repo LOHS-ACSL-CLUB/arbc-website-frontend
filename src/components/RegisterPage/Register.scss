@@ -2,7 +2,8 @@
 
 .register {
     width: 700px;
-    height: 1000px;
+    // height: 1000px;
+    padding: 5em 0;
     background-color: var(--bg-color3);
     display: flex;
     flex-direction: column;
@@ -18,14 +19,30 @@
     .socal-logo {
         width: 200px;
         margin-bottom: -5em;
+        margin-top: -5em;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        max-width: 35em;
+        width: 90%;
     }
 
     input {
         background-color: #f4f4f5;
         border-radius: 4px;
-        width: 35em;
+        width: 100%;
         min-height: 2.5em;
-        margin-bottom: 1.5em;
+        margin: 0 auto;
+        margin-bottom: 1em;
         font-family: inherit;
         font-size: 14px;
     }
@@ -35,6 +52,8 @@
         justify-content: flex-end;
         gap: 1em;
         font-size: 14px;
+        width: 90%;
+        margin-top: 3em;
 
         .previous {
             background: none;
@@ -57,10 +76,9 @@
             font-family: inherit;
         }
     }
-}
 
-@media screen and (max-width: $threshold) {
-    .register {
-        height: fit-content;
+    .validation-text {
+        font-size: 12px;
+        color: red;
     }
 }

@@ -1,8 +1,15 @@
+import { useEffect, useState } from "react";
+
+export type ShowValidations = { email: boolean; password: boolean };
+
 interface PersonalInformationData {
     firstName: string;
     lastName: string;
     email: string;
     password: string;
+    setCanSubmit(canSubmit: boolean): void;
+    showValidations: ShowValidations;
+    setShowValidations: React.Dispatch<React.SetStateAction<ShowValidations>>;
 }
 
 interface Props extends PersonalInformationData {
@@ -15,10 +22,41 @@ function PersonalInformationForm({
     email,
     password,
     updateFields,
+    setCanSubmit,
+    showValidations,
+    setShowValidations,
 }: Props) {
+    const [confirmEmail, setConfirmEmail] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+    const emailMatch = confirmEmail === email;
+    const passwordMatch = confirmPassword === password;
+
+    useEffect(() => {
+        if (!emailMatch || !passwordMatch) {
+            setCanSubmit(false);
+        } else {
+            setCanSubmit(true);
+        }
+    }, [emailMatch, passwordMatch, setCanSubmit]);
+
+    function onConfirmEmailChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setConfirmEmail(e.target.value);
+        setShowValidations(s => {
+            return { ...s, email: true };
+        });
+    }
+
+    function onConfirmPasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setConfirmPassword(e.target.value);
+        setShowValidations(s => {
+            return { ...s, password: true };
+        });
+    }
+
     return (
         <>
-            <div>
+            <div className="field">
                 <label htmlFor="first-name">First Name</label>
                 <input
                     id="first-name"
@@ -30,7 +68,7 @@ function PersonalInformationForm({
                     onChange={e => updateFields({ firstName: e.target.value })}
                 />
             </div>
-            <div>
+            <div className="field">
                 <label htmlFor="last-name">Last Name</label>
                 <input
                     id="last-name"
@@ -42,8 +80,8 @@ function PersonalInformationForm({
                 />
             </div>
 
-            <div>
-                <label htmlFor="email">Email</label>
+            <div className="field">
+                <label htmlFor="email">Email </label>
                 <input
                     id="email"
                     name="email"
@@ -54,18 +92,27 @@ function PersonalInformationForm({
                     onChange={e => updateFields({ email: e.target.value })}
                 />
             </div>
-            <div>
-                <label htmlFor="confirm-email">Confirm Email</label>
+            <div className="field">
+                <label htmlFor="confirm-email">
+                    Confirm Email{" "}
+                    {!emailMatch && showValidations.email && (
+                        <span className="validation-text">
+                            *Email does not match!*
+                        </span>
+                    )}
+                </label>
                 <input
                     id="confirm-email"
                     placeholder="Confirm Email"
                     type="email"
                     required
+                    value={confirmEmail}
+                    onChange={onConfirmEmailChange}
                 />
             </div>
 
-            <div>
-                <label htmlFor="password">Password</label>
+            <div className="field">
+                <label htmlFor="password">Password </label>
                 <input
                     id="password"
                     name="password"
@@ -76,13 +123,22 @@ function PersonalInformationForm({
                     onChange={e => updateFields({ password: e.target.value })}
                 />
             </div>
-            <div>
-                <label htmlFor="confirm-password">Confirm Password</label>
+            <div className="field">
+                <label htmlFor="confirm-password">
+                    Confirm Password{" "}
+                    {!passwordMatch && showValidations.password && (
+                        <span className="validation-text">
+                            *Password does not match!*
+                        </span>
+                    )}
+                </label>
                 <input
                     id="confirm-password"
                     placeholder="Confirm Password"
                     type="password"
                     required
+                    value={confirmPassword}
+                    onChange={onConfirmPasswordChange}
                 />
             </div>
         </>

@@ -18,7 +18,7 @@ function ProfileDataForm({
 }: Props) {
     return (
         <>
-            <div>
+            <div className="field">
                 <label htmlFor="school-name">School Name</label>
                 <input
                     id="school-name"
@@ -31,7 +31,7 @@ function ProfileDataForm({
                 />
             </div>
 
-            <div>
+            <div className="field">
                 <label htmlFor="grade">Grade (8-12)</label>
                 <input
                     id="grade"
@@ -48,7 +48,7 @@ function ProfileDataForm({
                 />
             </div>
 
-            <div>
+            <div className="field">
                 <label htmlFor="city">City</label>
                 <input
                     id="city"
@@ -60,12 +60,13 @@ function ProfileDataForm({
                 />
             </div>
 
-            <div>
+            <div className="field">
                 <label htmlFor="phone">Phone Number</label>
                 <input
                     id="phone"
                     name="phone"
                     placeholder="Phone Number"
+                    type="tel"
                     required
                     value={phone}
                     onChange={e => updateFields({ phone: e.target.value })}

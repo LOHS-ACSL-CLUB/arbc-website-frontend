@@ -6,6 +6,17 @@ body {
     background-color: var(--bg-color1);
 }
 
+html.hide-scrollbar {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
 body {
     --bg-color1: white;
     --bg-color2: #f3f4f6;

@@ -3,9 +3,12 @@ import axios from "axios";
 import useMultistepForm from "hooks/useMultistepForm";
 import { FormEvent, useState } from "react";
 import "./Register.scss";
-import PersonalInformationForm from "./RegisterForm/PersonalInformationForm";
+import PersonalInformationForm, {
+    ShowValidations,
+} from "./RegisterForm/PersonalInformationForm";
 import ProfileDataForm from "./RegisterForm/ProfileDataForm";
 import StepDisplay from "components/StepDisplay";
+import { useNavigate } from "react-router-dom";
 
 type RegisterFormData = {
     firstName: string;
@@ -31,6 +34,13 @@ const INITIAL_DATA: RegisterFormData = {
 
 function Register() {
     const [data, setData] = useState(INITIAL_DATA);
+    const [canSubmit, setCanSubmit] = useState(true);
+    const navigate = useNavigate();
+
+    const [showValidations, setShowValidations] = useState<ShowValidations>({
+        email: false,
+        password: false,
+    });
 
     function updateFields(fields: Partial<RegisterFormData>) {
         setData(data => {
@@ -40,12 +50,24 @@ function Register() {
 
     const { currentStepIndex, isFirstStep, next, back, isLastStep, step } =
         useMultistepForm([
-            <PersonalInformationForm {...data} updateFields={updateFields} />,
+            <PersonalInformationForm
+                {...data}
+                updateFields={updateFields}
+                setCanSubmit={setCanSubmit}
+                showValidations={showValidations}
+                setShowValidations={setShowValidations}
+            />,
             <ProfileDataForm {...data} updateFields={updateFields} />,
         ]);
 
     async function onSubmit(event: FormEvent) {
         event.preventDefault();
+
+        setShowValidations({ email: true, password: true });
+
+        if (!canSubmit) {
+            return;
+        }
 
         if (!isLastStep) {
             next();
@@ -66,9 +88,14 @@ function Register() {
                 data: formData,
             });
 
-            alert("Sent Successful!");
+            alert(
+                "Successfully registered! We have not yet opened up team registration but you will be able to add them soon."
+            );
+            navigate("/");
         } catch {
-            alert("Request Failed");
+            alert(
+                `Failed to register! Please try again later. If the problem persists, contact us at arbcsoutherncal@gmail.com`
+            );
         }
     }
 
@@ -76,11 +103,11 @@ function Register() {
         <div className="register">
             <img src={socalLogo} className="socal-logo" />
             <h2>Register</h2>
+            <StepDisplay
+                currentStep={currentStepIndex + 1}
+                steps={["Personal Information", "Profile Data"]}
+            />
             <form onSubmit={onSubmit}>
-                <StepDisplay
-                    currentStep={currentStepIndex + 1}
-                    steps={["Personal Information", "Profile Data"]}
-                />
                 {step}
                 <div className="buttons">
                     {!isFirstStep && (
