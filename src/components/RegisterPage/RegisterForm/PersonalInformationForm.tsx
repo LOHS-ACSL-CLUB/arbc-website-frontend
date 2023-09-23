@@ -1,3 +1,4 @@
+import ValidationInput from "components/ValidationInput";
 import { useEffect, useState } from "react";
 
 export type ShowValidations = { email: boolean; password: boolean };
@@ -92,24 +93,18 @@ function PersonalInformationForm({
                     onChange={e => updateFields({ email: e.target.value })}
                 />
             </div>
-            <div className="field">
-                <label htmlFor="confirm-email">
-                    Confirm Email{" "}
-                    {!emailMatch && showValidations.email && (
-                        <span className="validation-text">
-                            *Email does not match!*
-                        </span>
-                    )}
-                </label>
-                <input
-                    id="confirm-email"
-                    placeholder="Confirm Email"
-                    type="email"
-                    required
-                    value={confirmEmail}
-                    onChange={onConfirmEmailChange}
-                />
-            </div>
+            <ValidationInput
+                id="confirm-email"
+                placeholder="Confirm Email"
+                type="email"
+                required
+                value={confirmEmail}
+                onChange={onConfirmEmailChange}
+                isValidate={emailMatch}
+                showValidation={showValidations.email}
+                labelText="Confirm Email"
+                validationText="*Email does not match!*"
+            />
 
             <div className="field">
                 <label htmlFor="password">Password </label>
@@ -123,24 +118,18 @@ function PersonalInformationForm({
                     onChange={e => updateFields({ password: e.target.value })}
                 />
             </div>
-            <div className="field">
-                <label htmlFor="confirm-password">
-                    Confirm Password{" "}
-                    {!passwordMatch && showValidations.password && (
-                        <span className="validation-text">
-                            *Password does not match!*
-                        </span>
-                    )}
-                </label>
-                <input
-                    id="confirm-password"
-                    placeholder="Confirm Password"
-                    type="password"
-                    required
-                    value={confirmPassword}
-                    onChange={onConfirmPasswordChange}
-                />
-            </div>
+            <ValidationInput
+                id="confirm-password"
+                placeholder="Confirm Password"
+                type="password"
+                required
+                value={confirmPassword}
+                onChange={onConfirmPasswordChange}
+                isValidate={passwordMatch}
+                showValidation={showValidations.password}
+                labelText="Confirm Password"
+                validationText="*Password does not match!*"
+            />
         </>
     );
 }

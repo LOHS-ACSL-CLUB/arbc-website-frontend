@@ -27,7 +27,7 @@ const INITIAL_DATA: RegisterFormData = {
     email: "",
     password: "",
     schoolName: "",
-    grade: 9,
+    grade: 0,
     city: "",
     phone: "",
 };
@@ -57,7 +57,11 @@ function Register() {
                 showValidations={showValidations}
                 setShowValidations={setShowValidations}
             />,
-            <ProfileDataForm {...data} updateFields={updateFields} />,
+            <ProfileDataForm
+                {...data}
+                updateFields={updateFields}
+                setCanSubmit={setCanSubmit}
+            />,
         ]);
 
     async function onSubmit(event: FormEvent) {

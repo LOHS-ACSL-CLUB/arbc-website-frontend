@@ -1,8 +1,13 @@
+import ValidationInput from "components/ValidationInput";
+import { useEffect, useState } from "react";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input/input";
+
 interface ProfileData {
     schoolName: string;
     grade: number;
     city: string;
     phone: string;
+    setCanSubmit(canSubmit: boolean): void;
 }
 
 interface Props extends ProfileData {
@@ -15,7 +20,15 @@ function ProfileDataForm({
     city,
     updateFields,
     phone,
+    setCanSubmit,
 }: Props) {
+    const [showPhoneValidation, setShowPhoneValidation] = useState(false);
+    const isPhoneValidate = phone !== "" && isValidPhoneNumber(phone);
+
+    useEffect(() => {
+        setCanSubmit(isPhoneValidate);
+    }, [isPhoneValidate, setCanSubmit]);
+
     return (
         <>
             <div className="field">
@@ -38,7 +51,7 @@ function ProfileDataForm({
                     name="grade"
                     placeholder="Grade (8-12)"
                     required
-                    value={grade}
+                    value={grade || ""}
                     type="number"
                     onChange={e =>
                         updateFields({ grade: e.target.valueAsNumber })
@@ -60,18 +73,27 @@ function ProfileDataForm({
                 />
             </div>
 
-            <div className="field">
-                <label htmlFor="phone">Phone Number</label>
-                <input
-                    id="phone"
-                    name="phone"
-                    placeholder="Phone Number"
-                    type="tel"
-                    required
-                    value={phone}
-                    onChange={e => updateFields({ phone: e.target.value })}
-                />
-            </div>
+            <ValidationInput
+                labelText="Phone Number"
+                validationText="*Phone Number Is Not Valid!*"
+                customInput={
+                    <PhoneInput
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone Number"
+                        required
+                        value={phone}
+                        onChange={e => {
+                            updateFields({ phone: e || "" });
+                            setShowPhoneValidation(true);
+                        }}
+                        country="US"
+                        smartCaret
+                    />
+                }
+                isValidate={isValidPhoneNumber(phone || "")}
+                showValidation={showPhoneValidation}
+            />
         </>
     );
 }
