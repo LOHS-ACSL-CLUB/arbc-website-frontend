@@ -51,10 +51,6 @@
         margin-bottom: 0;
     }
 
-    // select {
-    //     color: white;
-    // }
-
     .PhoneInput {
         display: flex;
         align-items: center;
@@ -71,6 +67,10 @@
         font-size: 14px;
         width: 90%;
         margin-top: 3em;
+
+        button:disabled {
+            background-color: gray;
+        }
 
         .previous {
             background: none;

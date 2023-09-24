@@ -36,6 +36,7 @@ function Register() {
     const [data, setData] = useState(INITIAL_DATA);
     const [canSubmit, setCanSubmit] = useState(true);
     const navigate = useNavigate();
+    const [enableSubmit, setEnableSubmit] = useState(true);
 
     const [showValidations, setShowValidations] = useState<ShowValidations>({
         email: false,
@@ -84,7 +85,7 @@ function Register() {
         }
 
         try {
-            alert("Registering... please click OK and wait for a moment.");
+            setEnableSubmit(false);
 
             await axios({
                 method: "post",
@@ -125,7 +126,11 @@ function Register() {
                             Previous
                         </button>
                     )}
-                    <button type="submit" className="next">
+                    <button
+                        type="submit"
+                        className="next"
+                        disabled={!enableSubmit}
+                    >
                         {isLastStep ? "Submit" : "Next"}
                     </button>
                 </div>
