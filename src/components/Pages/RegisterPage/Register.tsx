@@ -1,7 +1,7 @@
 import socalLogo from "assets/Socal_Logo.png";
 import axios from "axios";
 import useMultistepForm from "hooks/useMultistepForm";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import "./Register.scss";
 import PersonalInformationForm, {
     ShowValidations,
@@ -37,6 +37,7 @@ function Register() {
     const [canSubmit, setCanSubmit] = useState(true);
     const navigate = useNavigate();
     const [enableSubmit, setEnableSubmit] = useState(true);
+    const [nextButtonText, setNextButtonText] = useState("Next");
 
     const [showValidations, setShowValidations] = useState<ShowValidations>({
         email: false,
@@ -65,6 +66,14 @@ function Register() {
             />,
         ]);
 
+    useEffect(() => {
+        if (isLastStep) {
+            setNextButtonText("Submit");
+        } else {
+            setNextButtonText("Next");
+        }
+    }, [isLastStep]);
+
     async function onSubmit(event: FormEvent) {
         event.preventDefault();
 
@@ -86,6 +95,7 @@ function Register() {
 
         try {
             setEnableSubmit(false);
+            setNextButtonText("Submitting...");
 
             await axios({
                 method: "post",
@@ -131,7 +141,7 @@ function Register() {
                         className="next"
                         disabled={!enableSubmit}
                     >
-                        {isLastStep ? "Submit" : "Next"}
+                        {nextButtonText}
                     </button>
                 </div>
             </form>
