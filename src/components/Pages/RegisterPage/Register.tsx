@@ -88,15 +88,15 @@ function Register() {
             return;
         }
 
+        setEnableSubmit(false);
+        setNextButtonText("Submitting...");
+
         const formData = new FormData();
         for (const [key, value] of Object.entries(data)) {
             formData.append(key, value.toString());
         }
 
         try {
-            setEnableSubmit(false);
-            setNextButtonText("Submitting...");
-
             await axios({
                 method: "post",
                 // url: "http://localhost:9000/new",
@@ -113,6 +113,9 @@ function Register() {
             alert(
                 `Failed to register! Please try again later. If the problem persists, contact us at arbcsoutherncal@gmail.com`
             );
+
+            setEnableSubmit(true);
+            setNextButtonText("Submit");
         }
     }
 
