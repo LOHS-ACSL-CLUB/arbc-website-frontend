@@ -9,14 +9,13 @@
     cursor: default;
     color: var(--text-color1);
 
-    img {
-        width: 100%;
-        object-fit: cover;
-    }
-
     .logo {
-        width: 120px;
+        width: 100px;
         object-fit: contain;
+        object-fit: cover;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
     }
 }
 

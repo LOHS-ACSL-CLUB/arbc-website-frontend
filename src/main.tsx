@@ -40,7 +40,8 @@ const router = createBrowserRouter(
             </Route>
             <Route path="/register" element={<RegisterPage />} />
         </>
-    )
+    ),
+    { basename: "/socal" }
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
