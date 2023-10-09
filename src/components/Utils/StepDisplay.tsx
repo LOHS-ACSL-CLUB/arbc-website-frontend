@@ -13,7 +13,7 @@ function StepDisplay({ currentStep, steps }: StepDisplayProps) {
             return (
                 <div
                     className={`step ${index === currentStep ? "active" : ""}`}
-                    key={s}
+                    key={`${s}-${i}`}
                 >
                     <div className="step-number">{index}</div>
                     <div className="step-description">{s}</div>

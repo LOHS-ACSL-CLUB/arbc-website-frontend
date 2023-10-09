@@ -1,14 +1,13 @@
 import axios from "axios";
+import FormPageTemplate from "components/Utils/FormPageTemplate";
+import StepDisplay from "components/Utils/StepDisplay";
 import useMultistepForm from "hooks/useMultistepForm";
 import { FormEvent, useEffect, useState } from "react";
-import PersonalInformationForm, {
-    ShowValidations,
-} from "./RegisterForm/PersonalInformationForm";
-import ProfileDataForm from "./RegisterForm/ProfileDataForm";
-import StepDisplay from "components/Utils/StepDisplay";
 import { useNavigate } from "react-router-dom";
+import "./index.scss";
+import TeamInfoForm from "./Forms/TeamInfoForm";
 
-type SinglePersonRegisterFormData = {
+type Member = {
     firstName: string;
     lastName: string;
     email: string;
@@ -19,30 +18,44 @@ type SinglePersonRegisterFormData = {
     phone: string;
 };
 
-const INITIAL_DATA: SinglePersonRegisterFormData = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    schoolName: "",
-    grade: 0,
-    city: "",
-    phone: "",
+type TeamRegisterFormData = {
+    teamName: string;
+    pointOfContactEmail: string;
+    pointOfContactPhone: string;
+    members: Member[];
 };
 
-function Register() {
+const INITIAL_DATA: TeamRegisterFormData = {
+    teamName: "",
+    pointOfContactEmail: "",
+    pointOfContactPhone: "",
+    members: [],
+};
+
+const DEFAULT_STEP_DISPLAY = ["Team Info"];
+
+function TeamRegisterPage() {
     const [data, setData] = useState(INITIAL_DATA);
-    const [canSubmit, setCanSubmit] = useState(true);
     const navigate = useNavigate();
     const [enableSubmit, setEnableSubmit] = useState(true);
     const [nextButtonText, setNextButtonText] = useState("Next");
+    const [stepDisplay, setStepDisplay] = useState(DEFAULT_STEP_DISPLAY);
+    const [canSubmit, setCanSubmit] = useState(true);
+    const [memberCount, setMemberCount] = useState(0);
 
-    const [showValidations, setShowValidations] = useState<ShowValidations>({
-        email: false,
-        password: false,
-    });
+    useEffect(() => {
+        let filledArray: string[];
 
-    function updateFields(fields: Partial<SinglePersonRegisterFormData>) {
+        if (memberCount < 1 || memberCount > 4) {
+            filledArray = [];
+        } else {
+            filledArray = Array(memberCount).fill("Member Info") as string[];
+        }
+
+        setStepDisplay([...DEFAULT_STEP_DISPLAY, ...filledArray]);
+    }, [memberCount]);
+
+    function updateFields(fields: Partial<TeamRegisterFormData>) {
         setData(data => {
             return { ...data, ...fields };
         });
@@ -50,17 +63,12 @@ function Register() {
 
     const { currentStepIndex, isFirstStep, next, back, isLastStep, step } =
         useMultistepForm([
-            <PersonalInformationForm
+            <TeamInfoForm
                 {...data}
-                updateFields={updateFields}
                 setCanSubmit={setCanSubmit}
-                showValidations={showValidations}
-                setShowValidations={setShowValidations}
-            />,
-            <ProfileDataForm
-                {...data}
                 updateFields={updateFields}
-                setCanSubmit={setCanSubmit}
+                memberCount={memberCount}
+                setMemberCount={setMemberCount}
             />,
         ]);
 
@@ -74,8 +82,6 @@ function Register() {
 
     async function onSubmit(event: FormEvent) {
         event.preventDefault();
-
-        setShowValidations({ email: true, password: true });
 
         if (!canSubmit) {
             return;
@@ -98,7 +104,7 @@ function Register() {
             await axios({
                 method: "post",
                 // url: "http://localhost:9000/new",
-                url: "https://arbc-backend-pzrv.onrender.com/new",
+                url: "https://arbc-backend-pzrv.onrender.com/team",
                 headers: { "Content-Type": "application/json" },
                 data: formData,
             });
@@ -107,9 +113,9 @@ function Register() {
                 "Successfully registered! We have not yet opened up team registration but you will be able to add them soon."
             );
             navigate("/");
-        } catch (e) {
+        } catch {
             alert(
-                `Failed to register! Please try again later. If the problem persists, contact us at arbcsoutherncal@gmail.com (${e})`
+                `Failed to register! Please try again later. If the problem persists, contact us at arbcsoutherncal@gmail.com`
             );
 
             setEnableSubmit(true);
@@ -118,11 +124,11 @@ function Register() {
     }
 
     return (
-        <>
-            <h2>Register</h2>
+        <FormPageTemplate className="team-register-page">
+            <h2>Team Register</h2>
             <StepDisplay
                 currentStep={currentStepIndex + 1}
-                steps={["Personal Information", "Profile Data"]}
+                steps={stepDisplay}
             />
             <form onSubmit={onSubmit}>
                 {step}
@@ -145,8 +151,8 @@ function Register() {
                     </button>
                 </div>
             </form>
-        </>
+        </FormPageTemplate>
     );
 }
 
-export default Register;
+export default TeamRegisterPage;

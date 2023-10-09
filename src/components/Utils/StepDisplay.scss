@@ -7,9 +7,9 @@
 
     .steps {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: baseline;
-        gap: 5em;
+        // gap: 4rem;
         z-index: 2;
         position: relative;
     }

@@ -19,7 +19,7 @@ function IntroductionSection() {
                 <GradientButton
                     width={155}
                     height={55}
-                    onClick={() => navigate("/register")}
+                    onClick={() => navigate("/registration-type")}
                 >
                     Register
                 </GradientButton>
