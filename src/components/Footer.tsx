@@ -21,7 +21,7 @@ function Footer() {
                 >
                     <FaLinkedin />
                 </Link>
-                <Link to="https://discord.gg/eSjVY48G" target="_blank">
+                <Link to="https://discord.gg/sNqJZqFrMv" target="_blank">
                     <FaDiscord />
                 </Link>
                 <Link

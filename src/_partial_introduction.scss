@@ -1,5 +1,6 @@
 @mixin basicIntroduction($padding: 200px 0) {
-    background: url("/src/assets/introduction.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/src/assets/introduction.png");
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
