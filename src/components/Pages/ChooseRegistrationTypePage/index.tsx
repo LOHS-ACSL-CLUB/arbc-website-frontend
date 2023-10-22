@@ -9,11 +9,16 @@ function ChooseRegistrationTypePage() {
             <div className="buttons">
                 <Link to="/register">
                     <img src={icon} alt="button icon" />
-                    Single Person Registration
+                    Member Registration
                 </Link>
                 <Link to="/team-register">
                     <img src={icon} alt="button icon" />
-                    Team Registration
+                    <div className="text">
+                        Team Registration
+                        <p className="notice">
+                            (individual members must register first)
+                        </p>
+                    </div>
                 </Link>
             </div>
         </FormPageTemplate>

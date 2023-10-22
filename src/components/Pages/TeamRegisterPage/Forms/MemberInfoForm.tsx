@@ -26,7 +26,9 @@ export default function MemberInfoForm({
     return (
         <>
             <div className="field">
-                <label htmlFor="member-email">Member Email</label>
+                <label htmlFor="member-email">
+                    Member Email (Email they used for member registration)
+                </label>
                 <input
                     id="member-email"
                     name="memberEmail"
