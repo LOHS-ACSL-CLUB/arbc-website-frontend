@@ -16,6 +16,8 @@ import {
 } from "react-router-dom";
 import MainPage from "./components/Pages/MainPage/index.tsx";
 import "./index.scss";
+import ChooseRegistrationTypePage from "./components/Pages/ChooseRegistrationTypePage/index.tsx";
+import TeamRegisterPage from "./components/Pages/TeamRegisterPage/index.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -39,6 +41,11 @@ const router = createBrowserRouter(
                 </Route>
             </Route>
             <Route path="/register" element={<RegisterPage />} />
+            <Route
+                path="/choose-registration"
+                element={<ChooseRegistrationTypePage />}
+            />
+            <Route path="/team-register" element={<TeamRegisterPage />} />
         </>
     )
 );

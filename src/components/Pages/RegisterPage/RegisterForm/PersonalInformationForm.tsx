@@ -8,13 +8,13 @@ interface PersonalInformationData {
     lastName: string;
     email: string;
     password: string;
-    setCanSubmit(canSubmit: boolean): void;
-    showValidations: ShowValidations;
-    setShowValidations: React.Dispatch<React.SetStateAction<ShowValidations>>;
 }
 
 interface Props extends PersonalInformationData {
     updateFields(data: Partial<PersonalInformationData>): void;
+    setCanSubmit(canSubmit: boolean): void;
+    setShowValidations: React.Dispatch<React.SetStateAction<ShowValidations>>;
+    showValidations: ShowValidations;
 }
 
 function PersonalInformationForm({

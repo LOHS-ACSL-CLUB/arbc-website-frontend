@@ -7,11 +7,11 @@ interface ProfileData {
     grade: number;
     city: string;
     phone: string;
-    setCanSubmit(canSubmit: boolean): void;
 }
 
 interface Props extends ProfileData {
     updateFields(field: Partial<ProfileData>): void;
+    setCanSubmit(canSubmit: boolean): void;
 }
 
 function ProfileDataForm({

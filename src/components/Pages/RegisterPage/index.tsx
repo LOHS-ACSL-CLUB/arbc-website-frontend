@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Register from "./Register";
 import "./index.scss";
+import FormPageTemplate from "components/Utils/FormPageTemplate";
 
 function RegisterPage() {
     useEffect(() => {
@@ -12,9 +13,9 @@ function RegisterPage() {
     }, []);
 
     return (
-        <div className="register-page">
+        <FormPageTemplate className="register-page">
             <Register />
-        </div>
+        </FormPageTemplate>
     );
 }
 

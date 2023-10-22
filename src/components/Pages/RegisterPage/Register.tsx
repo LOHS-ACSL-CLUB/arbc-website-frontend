@@ -1,8 +1,6 @@
-import socalLogo from "assets/Socal_Logo.png";
 import axios from "axios";
 import useMultistepForm from "hooks/useMultistepForm";
 import { FormEvent, useEffect, useState } from "react";
-import "./Register.scss";
 import PersonalInformationForm, {
     ShowValidations,
 } from "./RegisterForm/PersonalInformationForm";
@@ -10,7 +8,7 @@ import ProfileDataForm from "./RegisterForm/ProfileDataForm";
 import StepDisplay from "components/Utils/StepDisplay";
 import { useNavigate } from "react-router-dom";
 
-type RegisterFormData = {
+type SinglePersonRegisterFormData = {
     firstName: string;
     lastName: string;
     email: string;
@@ -21,7 +19,7 @@ type RegisterFormData = {
     phone: string;
 };
 
-const INITIAL_DATA: RegisterFormData = {
+const INITIAL_DATA: SinglePersonRegisterFormData = {
     firstName: "",
     lastName: "",
     email: "",
@@ -44,7 +42,7 @@ function Register() {
         password: false,
     });
 
-    function updateFields(fields: Partial<RegisterFormData>) {
+    function updateFields(fields: Partial<SinglePersonRegisterFormData>) {
         setData(data => {
             return { ...data, ...fields };
         });
@@ -93,7 +91,7 @@ function Register() {
 
         const formData = new FormData();
         for (const [key, value] of Object.entries(data)) {
-            formData.append(key, value.toString());
+            formData.append(key, JSON.stringify(value));
         }
 
         try {
@@ -109,9 +107,9 @@ function Register() {
                 "Successfully registered! We have not yet opened up team registration but you will be able to add them soon."
             );
             navigate("/");
-        } catch {
+        } catch (e) {
             alert(
-                `Failed to register! Please try again later. If the problem persists, contact us at arbcsoutherncal@gmail.com`
+                `Failed to register! Please try again later. If the problem persists, contact us at arbcsoutherncal@gmail.com (${e})`
             );
 
             setEnableSubmit(true);
@@ -120,8 +118,7 @@ function Register() {
     }
 
     return (
-        <div className="register">
-            <img src={socalLogo} className="socal-logo" />
+        <>
             <h2>Register</h2>
             <StepDisplay
                 currentStep={currentStepIndex + 1}
@@ -148,7 +145,7 @@ function Register() {
                     </button>
                 </div>
             </form>
-        </div>
+        </>
     );
 }
 

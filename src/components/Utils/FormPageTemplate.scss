@@ -1,25 +1,29 @@
-@import "src/variables";
-
-.register {
-    width: 700px;
-    // height: 1000px;
-    padding: 5em 0;
-    background-color: var(--bg-color3);
+.form-page-template {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 
-    label {
-        color: var(--text-color1);
-        display: block;
-        margin-bottom: 0.5em;
-        font-size: 14px;
+    .form-container {
+        width: 700px;
+        padding: 5em 0;
+        background-color: var(--bg-color3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .socal-logo {
         width: 200px;
         margin-bottom: -5em;
         margin-top: -5em;
+    }
+
+    label {
+        color: var(--text-color1);
+        display: block;
+        margin-bottom: 0.5em;
+        font-size: 14px;
     }
 
     form {
