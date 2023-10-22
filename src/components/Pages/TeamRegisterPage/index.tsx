@@ -2,34 +2,25 @@ import axios from "axios";
 import FormPageTemplate from "components/Utils/FormPageTemplate";
 import StepDisplay from "components/Utils/StepDisplay";
 import useMultistepForm from "hooks/useMultistepForm";
-import { FormEvent, useEffect, useState } from "react";
+import { serialize } from "object-to-formdata";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./index.scss";
+import MemberInfoForm from "./Forms/MemberInfoForm";
 import TeamInfoForm from "./Forms/TeamInfoForm";
-
-type Member = {
-    firstName: string;
-    lastName: string;
-    email: string;
-    password: string;
-    schoolName: string;
-    grade: number;
-    city: string;
-    phone: string;
-};
+import "./index.scss";
 
 type TeamRegisterFormData = {
     teamName: string;
     pointOfContactEmail: string;
     pointOfContactPhone: string;
-    members: Member[];
+    memberEmails: string[];
 };
 
 const INITIAL_DATA: TeamRegisterFormData = {
     teamName: "",
     pointOfContactEmail: "",
     pointOfContactPhone: "",
-    members: [],
+    memberEmails: [],
 };
 
 const DEFAULT_STEP_DISPLAY = ["Team Info"];
@@ -42,18 +33,53 @@ function TeamRegisterPage() {
     const [stepDisplay, setStepDisplay] = useState(DEFAULT_STEP_DISPLAY);
     const [canSubmit, setCanSubmit] = useState(true);
     const [memberCount, setMemberCount] = useState(0);
+    const DEFAULT_FORMS = useMemo(
+        () => [
+            <TeamInfoForm
+                {...data}
+                setCanSubmit={setCanSubmit}
+                updateFields={updateFields}
+                memberCount={memberCount}
+                setMemberCount={setMemberCount}
+            />,
+        ],
+        [memberCount, data]
+    );
+    const [forms, setForms] = useState<React.ReactElement[]>(DEFAULT_FORMS);
 
     useEffect(() => {
-        let filledArray: string[];
-
         if (memberCount < 1 || memberCount > 4) {
-            filledArray = [];
-        } else {
-            filledArray = Array(memberCount).fill("Member Info") as string[];
+            updateFields({ memberEmails: [] });
+            return;
         }
 
-        setStepDisplay([...DEFAULT_STEP_DISPLAY, ...filledArray]);
+        updateFields({ memberEmails: Array(memberCount).fill("") });
     }, [memberCount]);
+
+    useEffect(() => {
+        let newStepDisplays: string[];
+        let newForms: React.ReactElement[];
+        const count = data.memberEmails.length;
+
+        if (count < 1 || count > 4) {
+            newStepDisplays = [];
+            newForms = [];
+        } else {
+            newStepDisplays = data.memberEmails.map(() => "Member Info");
+            newForms = data.memberEmails.map((_, index) => {
+                return (
+                    <MemberInfoForm
+                        memberEmails={data.memberEmails}
+                        index={index}
+                        updateFields={updateFields}
+                    />
+                );
+            });
+        }
+
+        setStepDisplay([...DEFAULT_STEP_DISPLAY, ...newStepDisplays]);
+        setForms([...DEFAULT_FORMS, ...newForms]);
+    }, [data.memberEmails, DEFAULT_FORMS]);
 
     function updateFields(fields: Partial<TeamRegisterFormData>) {
         setData(data => {
@@ -62,15 +88,7 @@ function TeamRegisterPage() {
     }
 
     const { currentStepIndex, isFirstStep, next, back, isLastStep, step } =
-        useMultistepForm([
-            <TeamInfoForm
-                {...data}
-                setCanSubmit={setCanSubmit}
-                updateFields={updateFields}
-                memberCount={memberCount}
-                setMemberCount={setMemberCount}
-            />,
-        ]);
+        useMultistepForm(forms);
 
     useEffect(() => {
         if (isLastStep) {
@@ -95,10 +113,7 @@ function TeamRegisterPage() {
         setEnableSubmit(false);
         setNextButtonText("Submitting...");
 
-        const formData = new FormData();
-        for (const [key, value] of Object.entries(data)) {
-            formData.append(key, JSON.stringify(value));
-        }
+        const formData = serialize(data);
 
         try {
             await axios({
@@ -133,7 +148,7 @@ function TeamRegisterPage() {
             <form onSubmit={onSubmit}>
                 {step}
                 <div className="buttons">
-                    {!isFirstStep && (
+                    {!isFirstStep && enableSubmit && (
                         <button
                             type="button"
                             onClick={back}

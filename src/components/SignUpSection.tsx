@@ -18,7 +18,7 @@ function SignUpSection() {
             <GradientButton
                 width={155}
                 height={55}
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/choose-registration")}
             >
                 Register
             </GradientButton>

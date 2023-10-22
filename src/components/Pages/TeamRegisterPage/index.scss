@@ -1,0 +1,7 @@
+.team-register-page {
+    .next {
+        &:disabled {
+            cursor: default;
+        }
+    }
+}
